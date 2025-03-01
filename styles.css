@@ -128,24 +128,3 @@ footer {
     background: #2c3e50;
     color: white;
 }
-.map-container {
-    width: 80%; /* Breite des Containers */
-    max-width: 800px; /* Maximale Breite */
-    border: 2px solid #007bff; /* Rahmenfarbe */
-    border-radius: 10px; /* Abgerundete Ecken */
-    overflow: hidden; /* Versteckt Überlauf */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Schatten */
-    background-color: white; /* Hintergrundfarbe */
-}
-
-iframe {
-    width: 100%; /* Volle Breite des Containers */
-    height: 400px; /* Höhe der Karte */
-    border: none; /* Kein Rahmen */
-}
-
-h3 {
-    text-align: center; /* Zentrierter Titel */
-    margin: 20px 0; /* Abstand oben und unten */
-    color: #333; /* Textfarbe */
-}
