@@ -31,6 +31,40 @@
         </section>
             <h1>Standort</h1>
             <p>Wir haben denn Sitz in Möhlin Ringwegstrasse 20.</p>
+            <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .map-container {
+            width: 80%; /* Breite des Containers */
+            max-width: 800px; /* Maximale Breite */
+            border: 2px solid #007bff; /* Rahmenfarbe */
+            border-radius: 10px; /* Abgerundete Ecken */
+            overflow: hidden; /* Versteckt Überlauf */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Schatten */
+            background-color: white; /* Hintergrundfarbe */
+        }
+
+        iframe {
+            width: 100%; /* Volle Breite des Containers */
+            height: 400px; /* Höhe der Karte */
+            border: none; /* Kein Rahmen */
+        }
+
+        h3 {
+            text-align: center; /* Zentrierter Titel */
+            margin: 20px 0; /* Abstand oben und unten */
+            color: #333; /* Textfarbe */
+        }
+    </style>
             <section id="map">
             <div id="map">
     <iframe 
