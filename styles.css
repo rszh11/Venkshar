@@ -104,6 +104,10 @@ form button {
 form button:hover {
     background: #16a085;
 }
+#map {
+    height: 400px; /* Höhe der Karte */
+    width: 100%; /* Breite der Karte */
+}
 
 body {
     font-family: Arial, sans-serif;
