@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-    background-color: #ffcc00; /* Warmer, einladender Hintergrund */
+    background-color: #6ab04c; /* Sanftes Grün für den Header */
     padding: 30px; /* Innenabstand */
     text-align: center; /* Zentrierter Text */
     border-radius: 10px; /* Abgerundete Ecken */
@@ -22,7 +22,7 @@ header {
 
 header h1 {
     font-size: 2.5em; /* Schriftgröße für den Titel */
-    color: #333333; /* Dunklere Schriftfarbe */
+    color: #ffffff; /* Weiße Schriftfarbe für besseren Kontrast */
 }
 
 /* Navigation bleibt unverändert */
@@ -62,8 +62,8 @@ section ul li {
 footer {
     text-align: center; /* Zentrierter Text */
     padding: 20px; /* Innenabstand */
-    background-color: #ffcc00; /* Warmer, einladender Hintergrund */
-    color: #333333; /* Dunklere Schriftfarbe */
+    background-color: #4a4e69; /* Dunkles, sanftes Grau für den Footer */
+    color: #ffffff; /* Weiße Schriftfarbe für besseren Kontrast */
     position: relative; /* Positionierung */
     bottom: 0; /* Am unteren Rand */
     width: 100%; /* Volle Breite */
