@@ -1,48 +1,63 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Moderne Schriftart */
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f9; /* Heller, neutraler Hintergrund */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background: #34495e; /* Dunkelblau für einen modernen Look */
+    position: relative;
+    height: 100vh; /* Vollbild-Höhe */
+    background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover; /* Hochwertiges Hintergrundbild */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #ffffff;
-    padding: 40px 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.8em; /* Größere Schrift für mehr Wirkung */
-    font-weight: 600; /* Moderner Schriftstil */
+    font-size: 4em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.3s;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #1abc9c; /* Sanfter Farbwechsel */
-    transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
+    color: #1abc9c;
 }
 
 main {
@@ -51,27 +66,27 @@ main {
 
 section {
     margin: 30px 0;
-    background: #ffffff; /* Weiß für einen klaren Kontrast */
+    background: #ffffff;
     padding: 30px;
-    border-radius: 10px; /* Abgerundete Ecken für ein modernes Gefühl */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
-    transition: transform 0.3s; /* Sanfter Hover-Effekt */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
 section:hover {
-    transform: translateY(-5px); /* Leichte Anhebung beim Hover */
+    transform: translateY(-5px);
 }
 
 section h2 {
-    color: #34495e; /* Dunkelblau für Überschriften */
-    font-size: 2em;
+    color: #34495e;
+    font-size: 2.5em;
     margin-bottom: 15px;
 }
 
 footer {
     text-align: center;
     padding: 30px 0;
-    background: #34495e; /* Dunkelblau für den Footer */
+    background: #34495e;
     color: #ffffff;
 }
 
@@ -82,34 +97,101 @@ form {
 
 form label {
     margin: 15px 0 5px;
-    font-weight: 600; /* Fett für bessere Lesbarkeit */
+    font-weight: bold;
 }
 
 form input, form textarea {
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px; /* Abgerundete Ecken */
-    transition: border-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    transition: border-color 0.3s;
 }
 
 form input:focus, form textarea:focus {
-    border-color: #1abc9c; /* Farbwechsel beim Fokus */
-    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Sanfter Schatten */
+    border-color: #1abc9c;
 }
 
 form button {
     padding: 12px;
-    background: #1abc9c; /* Modernes Grün */
+    background: #1abc9c;
     color: #ffffff;
     border: none;
-    border-radius: 5px; /* Abgerundete Ecken */
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s;
 }
 
 form button:hover {
-    background: #16a085; /* Dunklerer Farbton beim Hover */
-    transform: translateY(-2px); /* Leichte Anhebung beim Hover */
-} ```css
+    background: #16a085;
+}
+
+/* Zusätzliche Stile für interaktive Elemente */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h ```css
+.card h3 {
+    color: #34495e;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    font-size: 1em;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card a:hover {
+    color: #16a085;
+}
+
+/* Animierte Scroll-Effekte */
+.scroll-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-effect.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    form button {
+        font-size: 1em;
+    }
 }
