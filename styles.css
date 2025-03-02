@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Moderne Schriftart */
-    background-color: #f4f4f4; /* Heller Hintergrund */
+    font-family: 'Montserrat', sans-serif; /* Moderne Schriftart */
+    background-color: #f0f0f0; /* Heller Hintergrund */
     color: #333;
     line-height: 1.6;
 }
@@ -14,7 +14,7 @@ body {
 header {
     position: relative;
     height: 100vh; /* Vollbild-Höhe */
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Farbverlauf */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Farbverlauf */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,24 +64,29 @@ nav ul li a:hover {
 
 main {
     padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 section {
-    margin: 30px 0;
+    flex: 1 1 30%; /* Flexibles Layout */
+    margin: 20px;
     background: #ffffff; /* Weiß für einen klaren Kontrast */
     padding: 30px;
     border-radius: 10px; /* Abgerundete Ecken */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 section:hover {
     transform: translateY(-5px); /* Leichte Anhebung beim Hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Intensivierter Schatten */
 }
 
 section h2 {
     color: #34495e; /* Dunkelblau für Überschriften */
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 15px;
 }
 
@@ -116,7 +121,7 @@ form input:focus, form textarea:focus {
 }
 
 form button {
-    padding:  12px;
+    padding: 12px;
     background: #1abc9c; /* Primärfarbe für den Button */
     color: #ffffff;
     border: none;
@@ -193,10 +198,18 @@ form button:hover {
     }
 
     section h2 {
-        font-size: 2em; /* Kleinere Schrift für mobile Geräte */
+        font-size: 1.8em; /* Kleinere Schrift für mobile Geräte */
     }
 
     form button {
         font-size: 1em; /* Kleinere Schrift für mobile Geräte */
+    }
+
+    main {
+        flex-direction: column; /* Vertikale Anordnung auf kleinen Bildschirmen */
+    }
+
+    section {
+        flex: 1 1 100%; /* Volle Breite auf kleinen Bildschirmen */
     }
 }
