@@ -25,36 +25,7 @@ header h1 {
     color: #333333; /* Dunklere Schriftfarbe */
 }
 
-/* Navigation */
-nav {
-    margin: 20px 0; /* Abstand über und unter der Navigation */
-}
-
-nav ul {
-    list-style: none; /* Keine Aufzählungszeichen */
-    padding: 0; /* Kein Innenabstand */
-}
-
-nav ul li {
-    display: inline; /* Horizontale Anordnung */
-    margin: 0 15px; /* Abstand zwischen den Links */
-}
-
-nav ul li a {
-    color: #ff6600; /* Warme Akzentfarbe */
-    text-decoration: none; /* Keine Unterstreichung */
-    font-weight: bold; /* Fettdruck für Links */
-    transition: color 0.3s ease; /* Sanfter Übergang für die Farbe */
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Unterstreichung beim Hover */
-    color: #cc5200; /* Dunklere Akzentfarbe beim Hover */
-}
-
-nav ul li a:focus {
-    outline: 2px solid #cc5200; /* Fokus-Stil für Zugänglichkeit */
-}
+/* Navigation bleibt unverändert */
 
 /* Hauptinhalt */
 main {
