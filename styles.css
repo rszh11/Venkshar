@@ -6,22 +6,23 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Moderne Schriftart */
-    background-color: #2a2a2a; /* Hellerer dunkler Hintergrund */
-    color: #ffffff; /* Helle Schriftfarbe */
-    line-height: 1.5; /* Zeilenhöhe für bessere Lesbarkeit */
+    font-family: 'Arial Rounded', sans-serif; /* Freundliche Schriftart */
+    background-color: #f0f0f0; /* Heller Hintergrund */
+    color: #333333; /* Dunklere Schriftfarbe für bessere Lesbarkeit */
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
 }
 
 /* Header */
 header {
-    background-color: #282c34; /* Dunkelgrauer Hintergrund */
-    padding: 20px; /* Innenabstand */
+    background-color: #ffcc00; /* Warmer, einladender Hintergrund */
+    padding: 30px; /* Innenabstand */
     text-align: center; /* Zentrierter Text */
+    border-radius: 10px; /* Abgerundete Ecken */
 }
 
 header h1 {
     font-size: 2.5em; /* Schriftgröße für den Titel */
-    color: #61dafb; /* Helle Akzentfarbe */
+    color: #333333; /* Dunklere Schriftfarbe */
 }
 
 /* Navigation */
@@ -36,11 +37,11 @@ nav ul {
 
 nav ul li {
     display: inline; /* Horizontale Anordnung */
-    margin: 0 20px; /* Abstand zwischen den Links */
+    margin: 0 15px; /* Abstand zwischen den Links */
 }
 
 nav ul li a {
-    color: #61dafb; /* Helle Akzentfarbe */
+    color: #ff6600; /* Warme Akzentfarbe */
     text-decoration: none; /* Keine Unterstreichung */
     font-weight: bold; /* Fettdruck für Links */
     transition: color 0.3s ease; /* Sanfter Übergang für die Farbe */
@@ -48,11 +49,11 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline; /* Unterstreichung beim Hover */
-    color: #21a1f1; /* Dunklere Akzentfarbe beim Hover */
+    color: #cc5200; /* Dunklere Akzentfarbe beim Hover */
 }
 
 nav ul li a:focus {
-    outline: 2px solid #21a1f1; /* Fokus-Stil für Zugänglichkeit */
+    outline: 2px solid #cc5200; /* Fokus-Stil für Zugänglichkeit */
 }
 
 /* Hauptinhalt */
@@ -62,15 +63,15 @@ main {
 
 /* Sektionen */
 section {
-    background: #2c2c2c; /* Dunkelgrauer Hintergrund für Sektionen */
+    background: #ffffff; /* Heller Hintergrund für Sektionen */
     padding: 20px; /* Innenabstand */
     margin: 20px 0; /* Abstand zwischen den Sektionen */
-    border-radius: 8px; /* Abgerundete Ecken */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7); /* Sanfter Schatten */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
 }
 
 section h2 {
-    color: #61dafb; /* Helle Akzentfarbe für Überschriften */
+    color: #ff6600; /* Warme Akzentfarbe für Überschriften */
     font-size: 1.8em; /* Schriftgröße für Überschriften */
     margin-bottom: 10px; /* Abstand unter der Überschrift */
 }
@@ -90,8 +91,8 @@ section ul li {
 footer {
     text-align: center; /* Zentrierter Text */
     padding: 20px; /* Innenabstand */
-    background-color: #282c34; /* Dunkelgrauer Hintergrund */
-    color: #ffffff; /* Weiße Schriftfarbe */
+    background-color: #ffcc00; /* Warmer, einladender Hintergrund */
+    color: #333333; /* Dunklere Schriftfarbe */
     position: relative; /* Positionierung */
     bottom: 0; /* Am unteren Rand */
     width: 100%; /* Volle Breite */
@@ -110,22 +111,22 @@ form label {
 form input, form textarea {
     padding: 10px; /* Innenabstand */
     margin-bottom: 15px; /* Abstand unter den Eingabefeldern */
-    border: 1px solid #444; /* Dunkler Rahmen */
+    border: 1px solid #ccc; /* Hellerer Rahmen */
     border-radius: 5px; /* Abgerundete Ecken */
-    background-color: #3c3c3c; /* Dunkler Hintergrund für Eingabefelder */
-    color: #ffffff; /* Weiße Schriftfarbe */
+    background-color: #f9f9f9; /* Heller Hintergrund für Eingabefelder */
+    color: #333333; /* Dunklere Schriftfarbe */
     transition: border-color 0.3s ease; /* Sanfter Übergang für den Rahmen */
 }
 
 form input:focus, form textarea:focus {
-    border-color: #61dafb; /* Heller Rahmen beim Fokus */
+    border-color: #ff6600; /* Warmer Rahmen beim Fokus */
     outline: none; /* Keine Standard-Fokuslinie */
 }
 
 form button {
     padding: 10px; /* Innenabstand */
     margin-top: 10px; /* Abstand über dem Button */
-    background-color: #61dafb; /* Helle Akzentfarbe */
+    background-color: #ff6600; /* Warme Akzentfarbe */
     color: #ffffff; /* Weiße Schriftfarbe */
     border: none; /* Kein Rahmen */
     border-radius: 5px; /* Abgerundete Ecken */
@@ -134,8 +135,9 @@ form button {
 }
 
 form button:hover {
-    background-color: #21a1f1; /* Dunklere Akzentfarbe beim Hover */
-} ```css
+    background-color: #cc5200; /* Dunklere Akzentfarbe beim Hover */
+}
+
 /* Medienabfragen */
 @media (max-width: 768px) {
     header h1 {
@@ -169,11 +171,11 @@ form button:hover {
 body {
     animation: fadeIn 0.5s ease; /* Fade-In-Effekt für den gesamten Body */
 }
-``` ```css
+
 /* Zusätzliche Stile */
 h1, h2, h3 {
-    font-family: 'Arial', sans-serif; /* Einheitliche Schriftart für Überschriften */
-    text-transform: uppercase; /* Großbuchstaben für Überschriften */
+    font-family: 'Arial Rounded', sans-serif; /* Einheitliche Schriftart für Überschriften */
+    text-transform: none; /* Keine Großbuchstaben für Überschriften */
 }
 
 a {
@@ -181,7 +183,7 @@ a {
 }
 
 a:hover {
-    text-shadow: 0 0 5px #61dafb; /* Leichter Schatten beim Hover */
+    text-shadow: 0 0 5px #ff6600; /* Leichter Schatten beim Hover */
 }
 
 /* Tabellen */
@@ -193,18 +195,18 @@ table {
 
 th, td {
     padding: 15px; /* Innenabstand für Zellen */
-    border: 1px solid #444; /* Dunkler Rahmen für Zellen */
+    border: 1px solid #ccc; /* Hellerer Rahmen für Zellen */
     text-align: left; /* Linksbündige Ausrichtung */
 }
 
 th {
-    background-color: #3c3c3c; /* Dunkler Hintergrund für Kopfzeilen */
-    color: #61dafb; /* Helle Schriftfarbe für Kopfzeilen */
+    background-color: #f9f9f9; /* Heller Hintergrund für Kopfzeilen */
+    color: #ff6600; /* Warme Schriftfarbe für Kopfzeilen */
 }
 
 /* Zusätzliche Anpassungen für Buttons */
 button:disabled {
-    background-color: #666; /* Graue Hintergrundfarbe für deaktivierte Buttons */
+    background-color: #ccc; /* Graue Hintergrundfarbe für deaktivierte Buttons */
     cursor: not-allowed; /* Zeiger-Cursor für deaktivierte Buttons */
 }
 
@@ -214,5 +216,5 @@ section {
 }
 
 section:hover {
-    transform: scale(1.02); /* Leichte Vergrößerung beim Hover */
+    transform: scale(1.01); /* Leichte Vergrößerung beim Hover */
 }
