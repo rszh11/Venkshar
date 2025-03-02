@@ -7,17 +7,17 @@
 
 body {
     font-family: 'Poppins', sans-serif; /* Moderne Schriftart */
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Sanfter Farbverlauf */
+    background: #f0f4f8; /* Heller Hintergrund */
     color: #333;
     line-height: 1.6;
-    perspective: 1000px; /* Perspektive für 3D-Effekte */
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
 
 /* Header */
 header {
     position: relative;
     height: 100vh; /* Vollbild-Höhe */
-    background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover; /* Hochwertiges Hintergrundbild */
+    background: linear-gradient(135deg, rgba(255, 126, 95, 0.8), rgba(254, 180, 123, 0.8)), url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover; /* Farbverlauf über Hintergrundbild */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,7 +87,7 @@ section {
 }
 
 section:hover {
-    transform: translateY(-5px); /* Leichte Anhebung beim Hover */
+    transform: translateY(-10px); /* Leichte Anhebung beim Hover */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Intensivierter Schatten */
 }
 
@@ -131,12 +131,12 @@ form input:focus, form textarea:focus {
 
 form button {
     padding: 12px;
-    background: #1abc9c; /* Primärfarbe für den Button */
+    background: #1abc9 c; /* Primärfarbe für den Button */
     color: #ffffff;
     border: none;
     border-radius: 5px; /* Abgerundete Ecken */
     cursor: pointer;
- transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 form button:hover {
@@ -156,5 +156,166 @@ form button:hover {
 
     section {
         flex: 1 1 100%; /* Volle Breite für Sektionen */
+    }
+} ```css
+/* Zusätzliche Stile für ein einzigartiges Design */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Eine weitere moderne Schriftart */
+    text-transform: uppercase; /* Großbuchstaben für Überschriften */
+    letter-spacing: 1px; /* Abstand zwischen den Buchstaben */
+}
+
+button {
+    font-size: 1.1em; /* Größere Schrift für bessere Lesbarkeit */
+    transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s; /* Sanftere Übergänge */
+}
+
+button:active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Schatten beim Klicken */
+}
+
+/* Animationen für den Header */
+header h1 {
+    animation: fadeIn 1.5s ease-in-out; /* Fade-In-Effekt für den Header */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stil für Links */
+a {
+    color: #3498db; /* Blau für Links */
+    text-decoration: none; /* Keine Unterstreichung */
+    transition: color 0.3s; /* Sanfter Farbwechsel */
+}
+
+a:hover {
+    color: #2980b9; /* Dunkleres Blau beim Hover */
+}
+
+/* Kartenstil für Sektionen */
+section {
+    position: relative;
+    overflow: hidden; /* Verhindert Überlauf */
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Leichte Überlagerung */
+    transition: opacity 0.3s; /* Sanfter Übergang */
+    opacity: 0; /* Anfangs unsichtbar */
+}
+
+section:hover::before {
+    opacity: 1; /* Sichtbar beim Hover */
+}
+
+/* Footer-Stil */
+footer {
+    font-size: 0.9em; /* Kleinere Schrift für den Footer */
+    border-top: 1px solid #ccc; /* Trennlinie oben im Footer */
+}
+``` ```css
+/* Zusätzliche Stile für ein einzigartiges Design */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Eine weitere moderne Schriftart */
+    text-transform: uppercase; /* Großbuchstaben für Überschriften */
+    letter-spacing: 1px; /* Abstand zwischen den Buchstaben */
+}
+
+button {
+    font-size: 1.1em; /* Größere Schrift für bessere Lesbarkeit */
+    transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s; /* Sanftere Übergänge */
+}
+
+button:active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Schatten beim Klicken */
+}
+
+/* Animationen für den Header */
+header h1 {
+    animation: fadeIn 1.5s ease-in-out; /* Fade-In-Effekt für den Header */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stil für Links */
+a {
+    color: #3498db; /* Blau für Links */
+    text-decoration: none; /* Keine Unterstreichung */
+    transition: color 0.3s; /* Sanfter Farbwechsel */
+}
+
+a:hover {
+    color: #2980b9; /* Dunkleres Blau beim Hover */
+}
+
+/* Kartenstil für Sektionen */
+section {
+    position: relative;
+    overflow: hidden; /* Verhindert Überlauf */
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Leichte Überlagerung */
+    transition: opacity 0.3s; /* Sanfter Übergang */
+    opacity: 0; /* Anfangs unsichtbar */
+}
+
+section:hover::before {
+    opacity: 1; /* Sichtbar beim Hover */
+}
+
+/* Footer-Stil */
+footer {
+    font-size: 0.9em; /* Kleinere Schrift für den Footer */
+    border-top: 1px solid #ccc; /* Trennlinie oben im Footer */
+}
+
+/* Zusätzliche Anpassungen für mobile Geräte */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5em; /* Noch kleinere Schrift auf sehr kleinen Bildschirmen */
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertikale Navigation auf kleinen Bildschirmen */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Abstand zwischen den Navigationselementen */
+    }
+
+    section {
+        flex: 1 1 100%; /* Volle Breite für Sektionen */
+        margin: 10px 0; /* Abstand zwischen den Sektionen */
     }
 }
