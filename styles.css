@@ -3,25 +3,24 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif; /* Wechsel zu einer neutraleren Schriftart */
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8;
+    background-color: #ffffff; /* Heller, neutraler Hintergrund */
     color: #333;
 }
 
 header {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
+    background: #2c3e50; /* Einfarbiger Header */
     color: #ffffff;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
-    position: relative;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3em;
-    font-weight: 700;
+    font-size: 2.5em;
+    font-weight: normal; /* Weniger Gewicht für eine neutralere Wirkung */
 }
 
 nav ul {
@@ -31,52 +30,43 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.3s;
+    font-weight: normal; /* Weniger betont */
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #1abc9c;
-    transform: scale(1.1);
+    color: #bdc3c7; /* Sanfterer Hover-Effekt */
 }
 
 main {
-    padding: 40px;
+    padding: 20px;
 }
 
 section {
-    margin: 30px 0;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-section:hover {
-    transform: translateY(-5px);
+    margin: 20px 0;
+    background: #f8f9fa; /* Heller, neutraler Hintergrund für Abschnitte */
+    padding: 20px;
+    border-radius: 5px; /* Weniger abgerundete Ecken */
+    box-shadow: none; /* Keine Schatten für ein flacheres Design */
 }
 
 section h2 {
     color: #2c3e50;
     font-size: 2em;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 footer {
     text-align: center;
-    padding: 30px 0;
-    background: linear-gradient(135deg, #2c3e50, #34495e);
+    padding: 20px 0;
+    background: #2c3e50; /* Einfarbiger Footer */
     color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 form {
@@ -85,34 +75,32 @@ form {
 }
 
 form label {
-    margin: 15px 0 5px;
-    font-weight: 600;
+    margin: 10px 0 5px;
+    font-weight: normal; /* Neutralere Schriftart */
 }
 
 form input, form textarea {
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    border-radius: 3px; /* Weniger abgerundete Ecken */
+    transition: border-color 0.3s;
 }
 
 form input:focus, form textarea:focus {
-    border-color: #1abc9c;
-    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+    border-color: #2c3e50; /* Neutraler Fokus */
 }
 
 form button {
-    padding: 12px;
-    background: #1abc9c;
+    padding: 10px;
+    background: #2c3e50; /* Einfarbiger Button */
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px; /* Weniger abgerundete Ecken */
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s;
 }
 
 form button:hover {
-    background: #16a085;
-    transform: translateY(-2px);
+    background: #34495e; /* Dunklerer Farbton für Hover */
 }
