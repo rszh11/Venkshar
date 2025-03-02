@@ -6,316 +6,121 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Moderne Schriftart */
-    background: #f0f4f8; /* Heller Hintergrund */
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    font-family: 'Arial', sans-serif; /* Standard Schriftart */
+    background-color: #f4f4f4; /* Heller Hintergrund */
+    color: #333; /* Dunkle Schriftfarbe */
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
 }
 
 /* Header */
 header {
-    position: relative;
-    height: 100vh; /* Vollbild-Höhe */
-    background: linear-gradient(135deg, rgba(255, 126, 95, 0.8), rgba(254, 180, 123, 0.8)), url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover; /* Farbverlauf über Hintergrundbild */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    overflow: hidden;
+    background-color: #34495e; /* Dunkelblauer Hintergrund */
+    color: #ffffff; /* Weiße Schriftfarbe */
+    padding: 20px; /* Innenabstand */
+    text-align: center; /* Zentrierter Text */
 }
 
 header h1 {
-    font-size: 4em; /* Große Schrift für mehr Wirkung */
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2.5em; /* Schriftgröße für den Titel */
 }
 
 header p {
-    font-size: 1.5em;
-    margin: 20px 0;
+    font-size: 1.2em; /* Schriftgröße für den Untertitel */
 }
 
 /* Navigation */
 nav {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    margin: 20px 0; /* Abstand über und unter der Navigation */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+    list-style: none; /* Keine Aufzählungszeichen */
+    padding: 0; /* Kein Innenabstand */
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline; /* Horizontale Anordnung */
+    margin: 0 15px; /* Abstand zwischen den Links */
 }
 
 nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.3s;
+    color: #ffffff; /* Weiße Schriftfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+    font-weight: bold; /* Fettdruck für Links */
 }
 
 nav ul li a:hover {
-    color: #1abc9c; /* Sanfter Farbwechsel */
-    transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
+    text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
 /* Hauptinhalt */
 main {
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 20px; /* Innenabstand */
 }
 
 /* Sektionen */
 section {
-    flex: 1 1 30%; /* Flexibles Layout */
-    margin: 20px;
-    background: #ffffff; /* Weiß für einen klaren Kontrast */
-    padding: 30px;
-    border-radius: 15px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-section:hover {
-    transform: translateY(-10px); /* Leichte Anhebung beim Hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Intensivierter Schatten */
+    background: #ffffff; /* Weißer Hintergrund für Sektionen */
+    padding: 20px; /* Innenabstand */
+    margin: 20px 0; /* Abstand zwischen den Sektionen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
 }
 
 section h2 {
     color: #34495e; /* Dunkelblau für Überschriften */
-    font-size: 2.5em;
-    margin-bottom: 15px;
+    font-size: 1.8em; /* Schriftgröße für Überschriften */
+    margin-bottom: 10px; /* Abstand unter der Überschrift */
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 30px 0;
-    background: #34495e; /* Dunkelblau für den Footer */
-    color: #ffffff;
+    text-align: center; /* Zentrierter Text */
+    padding: 20px; /* Innenabstand */
+    background-color: #34495e; /* Dunkelblauer Hintergrund */
+    color: #ffffff; /* Weiße Schriftfarbe */
+    position: relative; /* Positionierung */
+    bottom: 0; /* Am unteren Rand */
+    width: 100%; /* Volle Breite */
 }
 
 /* Formulare */
 form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flexbox für das Layout */
+    flex-direction: column; /* Vertikale Anordnung */
 }
 
 form label {
-    margin: 15px 0 5px;
-    font-weight: 600; /* Fett für bessere Lesbarkeit */
+    margin: 10px 0 5px; /* Abstand über und unter dem Label */
 }
 
 form input, form textarea {
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    padding: 10px; /* Innenabstand */
+    margin-bottom: 10px; /* Abstand unter den Eingabefeldern */
+    border: 1px solid #ccc; /* Graue Rahmenfarbe */
     border-radius: 5px; /* Abgerundete Ecken */
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #1abc9c; /* Farbwechsel beim Fokus */
-    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Sanfter Schatten */
 }
 
 form button {
-    padding: 12px;
-    background: #1abc9 c; /* Primärfarbe für den Button */
-    color: #ffffff;
-    border: none;
+    padding: 10px; /* Innenabstand */
+    background: #1abc9c; /* Primärfarbe für den Button */
+    color: #ffffff; /* Weiße Schriftfarbe */
+    border: none; /* Kein Rahmen */
     border-radius: 5px; /* Abgerundete Ecken */
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer; /* Zeiger beim Hover */
 }
 
 form button:hover {
     background: #16a085; /* Dunklere Farbe beim Hover */
-    transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
 }
 
-/* Medienabfragen für responsives Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 3em; /* Kleinere Schrift auf mobilen Geräten */
-    }
-
-    main {
-        flex-direction: column; /* Vertikales Layout auf kleinen Bildschirmen */
+        font-size: 2em; /* Kleinere Schrift auf mobilen Geräten */
     }
 
     section {
-        flex: 1 1 100%; /* Volle Breite für Sektionen */
-    }
-} ```css
-/* Zusätzliche Stile für ein einzigartiges Design */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif; /* Eine weitere moderne Schriftart */
-    text-transform: uppercase; /* Großbuchstaben für Überschriften */
-    letter-spacing: 1px; /* Abstand zwischen den Buchstaben */
-}
-
-button {
-    font-size: 1.1em; /* Größere Schrift für bessere Lesbarkeit */
-    transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s; /* Sanftere Übergänge */
-}
-
-button:active {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Schatten beim Klicken */
-}
-
-/* Animationen für den Header */
-header h1 {
-    animation: fadeIn 1.5s ease-in-out; /* Fade-In-Effekt für den Header */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Stil für Links */
-a {
-    color: #3498db; /* Blau für Links */
-    text-decoration: none; /* Keine Unterstreichung */
-    transition: color 0.3s; /* Sanfter Farbwechsel */
-}
-
-a:hover {
-    color: #2980b9; /* Dunkleres Blau beim Hover */
-}
-
-/* Kartenstil für Sektionen */
-section {
-    position: relative;
-    overflow: hidden; /* Verhindert Überlauf */
-}
-
-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1); /* Leichte Überlagerung */
-    transition: opacity 0.3s; /* Sanfter Übergang */
-    opacity: 0; /* Anfangs unsichtbar */
-}
-
-section:hover::before {
-    opacity: 1; /* Sichtbar beim Hover */
-}
-
-/* Footer-Stil */
-footer {
-    font-size: 0.9em; /* Kleinere Schrift für den Footer */
-    border-top: 1px solid #ccc; /* Trennlinie oben im Footer */
-}
-``` ```css
-/* Zusätzliche Stile für ein einzigartiges Design */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif; /* Eine weitere moderne Schriftart */
-    text-transform: uppercase; /* Großbuchstaben für Überschriften */
-    letter-spacing: 1px; /* Abstand zwischen den Buchstaben */
-}
-
-button {
-    font-size: 1.1em; /* Größere Schrift für bessere Lesbarkeit */
-    transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s; /* Sanftere Übergänge */
-}
-
-button:active {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Schatten beim Klicken */
-}
-
-/* Animationen für den Header */
-header h1 {
-    animation: fadeIn 1.5s ease-in-out; /* Fade-In-Effekt für den Header */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Stil für Links */
-a {
-    color: #3498db; /* Blau für Links */
-    text-decoration: none; /* Keine Unterstreichung */
-    transition: color 0.3s; /* Sanfter Farbwechsel */
-}
-
-a:hover {
-    color: #2980b9; /* Dunkleres Blau beim Hover */
-}
-
-/* Kartenstil für Sektionen */
-section {
-    position: relative;
-    overflow: hidden; /* Verhindert Überlauf */
-}
-
-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1); /* Leichte Überlagerung */
-    transition: opacity 0.3s; /* Sanfter Übergang */
-    opacity: 0; /* Anfangs unsichtbar */
-}
-
-section:hover::before {
-    opacity: 1; /* Sichtbar beim Hover */
-}
-
-/* Footer-Stil */
-footer {
-    font-size: 0.9em; /* Kleinere Schrift für den Footer */
-    border-top: 1px solid #ccc; /* Trennlinie oben im Footer */
-}
-
-/* Zusätzliche Anpassungen für mobile Geräte */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2.5em; /* Noch kleinere Schrift auf sehr kleinen Bildschirmen */
-    }
-
-    nav ul {
-        flex-direction: column; /* Vertikale Navigation auf kleinen Bildschirmen */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Abstand zwischen den Navigationselementen */
-    }
-
-    section {
-        flex: 1 1 100%; /* Volle Breite für Sektionen */
-        margin: 10px 0; /* Abstand zwischen den Sektionen */
+        margin: 10px 0; /* Weniger Abstand auf kleinen Bildschirmen */
     }
 }
