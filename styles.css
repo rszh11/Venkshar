@@ -3,24 +3,24 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Wechsel zu einer neutraleren Schriftart */
+    font-family: 'Arial', sans-serif; /* Moderne Schriftart */
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Heller, neutraler Hintergrund */
+    background-color: #f4f6f9; /* Heller, neutraler Hintergrund */
     color: #333;
 }
 
 header {
-    background: #2c3e50; /* Einfarbiger Header */
+    background: #34495e; /* Dunkelblau für einen modernen Look */
     color: #ffffff;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
-    font-weight: normal; /* Weniger Gewicht für eine neutralere Wirkung */
+    font-size: 2.8em; /* Größere Schrift für mehr Wirkung */
+    font-weight: 600; /* Moderner Schriftstil */
 }
 
 nav ul {
@@ -30,42 +30,48 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: normal; /* Weniger betont */
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
-    color: #bdc3c7; /* Sanfterer Hover-Effekt */
+    color: #1abc9c; /* Sanfter Farbwechsel */
+    transform: scale(1.1); /* Leichte Vergrößerung beim Hover */
 }
 
 main {
-    padding: 20px;
+    padding: 40px;
 }
 
 section {
-    margin: 20px 0;
-    background: #f8f9fa; /* Heller, neutraler Hintergrund für Abschnitte */
-    padding: 20px;
-    border-radius: 5px; /* Weniger abgerundete Ecken */
-    box-shadow: none; /* Keine Schatten für ein flacheres Design */
+    margin: 30px 0;
+    background: #ffffff; /* Weiß für einen klaren Kontrast */
+    padding: 30px;
+    border-radius: 10px; /* Abgerundete Ecken für ein modernes Gefühl */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    transition: transform 0.3s; /* Sanfter Hover-Effekt */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Leichte Anhebung beim Hover */
 }
 
 section h2 {
-    color: #2c3e50;
+    color: #34495e; /* Dunkelblau für Überschriften */
     font-size: 2em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #2c3e50; /* Einfarbiger Footer */
+    padding: 30px 0;
+    background: #34495e; /* Dunkelblau für den Footer */
     color: #ffffff;
 }
 
@@ -75,32 +81,35 @@ form {
 }
 
 form label {
-    margin: 10px 0 5px;
-    font-weight: normal; /* Neutralere Schriftart */
+    margin: 15px 0 5px;
+    font-weight: 600; /* Fett für bessere Lesbarkeit */
 }
 
 form input, form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 3px; /* Weniger abgerundete Ecken */
-    transition: border-color 0.3s;
+    border-radius: 5px; /* Abgerundete Ecken */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 form input:focus, form textarea:focus {
-    border-color: #2c3e50; /* Neutraler Fokus */
+    border-color: #1abc9c; /* Farbwechsel beim Fokus */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Sanfter Schatten */
 }
 
 form button {
-    padding: 10px;
-    background: #2c3e50; /* Einfarbiger Button */
+    padding: 12px;
+    background: #1abc9c; /* Modernes Grün */
     color: #ffffff;
     border: none;
-    border-radius: 3px; /* Weniger abgerundete Ecken */
+    border-radius: 5px; /* Abgerundete Ecken */
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 form button:hover {
-    background: #34495e; /* Dunklerer Farbton für Hover */
+    background: #16a085; /* Dunklerer Farbton beim Hover */
+    transform: translateY(-2px); /* Leichte Anhebung beim Hover */
+} ```css
 }
