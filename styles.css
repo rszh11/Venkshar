@@ -1,8 +1,11 @@
-/* Grundlegende Stile für die überarbeitete Website */
+/* Grundlegende Stile für die moderne Website */
 body {
-    background-color: #f4f4f4; /* Heller, neutraler Hintergrund */
-    color: #444; /* Dunkler Text für bessere Lesbarkeit */
-    font-family: 'Arial', sans-serif; /* Moderne Schriftart */
+    background-color: #f4f4f4; /* Heller Hintergrund */
+    color: #333; /* Dunkler Text */
+    font-family: 'Poppins', sans-serif; /* Moderne Schriftart */
+    line-height: 1.6; /* Bessere Lesbarkeit */
+    margin: 0; /* Entfernen von Standard-Margen */
+    padding: 0; /* Entfernen von Standard-Padding */
 }
 
 /* Flexibles Layout */
@@ -22,20 +25,174 @@ body {
 
 /* Stil für Call-to-Action-Buttons */
 .button {
-    background-color: #28a745; /* Grüner Hintergrund */
+    background-color: #007bff; /* Primärfarbe */
     color: white; /* Weißer Text */
     border: none; /* Keine Rahmen */
     padding: 12px 24px; /* Innenabstand */
-    border-radius: 5px; /* Abgerundete Ecken */
-    transition: background-color 0.3s; /* Sanfter Übergang */
+    border-radius: 30px; /* Abgerundete Ecken */
+    transition: background-color 0.3s, transform 0.3s; /* Sanfter Übergang */
+    font-size: 16px; /* Schriftgröße anpassen */
+    cursor: pointer; /* Zeiger ändern sich beim Hover */
 }
 
 .button:hover {
-    background-color: #218838; /* Dunklerer Grünton bei Hover */
+    background-color: #0056b3; /* Dunklerer Farbton bei Hover */
+    transform: translateY(-2px); /* Leichte Anhebung bei Hover */
+}
+
+/* Stil für Links */
+a {
+    color: #007bff; /* Standard Linkfarbe */
+    text-decoration: none; /* Unterstreichung entfernen */
+    transition: color 0.3s; /* Sanfter Übergang */
+}
+
+a:hover {
+    color: #0056b3; /* Dunklere Farbe bei Hover */
+    text-decoration: underline; /* Unterstreichung bei Hover */
 }
 
 /* Responsive Bilder */
 img {
     max-width: 100%; /* Bilder passen sich an den Container an */
     height: auto; /* Beibehaltung des Seitenverhältnisses */
+    border-radius: 10px; /* Abgerundete Ecken für Bilder */
+}
+
+/* Stil für Karten */
+.card {
+    background-color: white; /* Weißer Hintergrund für Karten */
+    border: none; /* Keine Rahmen */
+    border-radius: 10px; /* Abgerundete Ecken */
+    padding: 20px; /* Innenabstand */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    transition: transform 0.3s, box-shadow 0.3s; /* Sanfter Übergang */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Leichte Anhebung bei Hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Intensivierter Schatten bei Hover */
+}
+
+/* Stil für moderne Überschriften */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Moderne Schriftart */
+    color: #222; /* Dunklere Farbe für Überschriften */
+    margin: 10px 0; /* Abstand um Überschriften */
+}
+
+/* Stil für Fußzeile */
+footer {
+    background-color: #333; /* Dunkler Hintergrund für die Fußzeile */
+    color: white; /* Weißer Text */
+    text-align: center; /* Zentrierter Text */
+    padding: 20px; /* Innenabstand */
+}
+
+/* Stil für Formulare */
+input, textarea {
+    border: 1px solid #ccc; /* Leichter Rahmen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    padding: 10px; /* Innenabstand */
+    width: 100%; /* Volle Breite */
+    margin-bottom: 15px; /* Abstand zwischen den Feldern */
+    transition: border-color 0.3s; /* Sanfter Übergang */
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff; /* Rahmenfarbe bei Fokus */
+    outline: none; /* Keine Standard-Fokuslinie */
+}
+
+/* Stil für Ladeanimation */
+.loader {
+    border: 8px solid #f3f3f3; /* Heller Hintergrund */
+    border-top: 8px solid #3498db; /* Akzentfarbe */
+    border-radius: 50%; /* Runde Form */
+    width: 50px; /* Breite */
+    height: 50px; /* Höhe */
+    animation: spin 1s linear infinite; /* Animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+``` Um das Design weiter zu verfeinern und ansprechender zu gestalten, können wir zusätzliche Features und Stile implementieren. Hier sind einige weitere Ideen:
+
+### 1. **Hover-Effekte für Bilder**
+Fügen Sie Hover-Effekte für Bilder hinzu, um die Interaktivität zu erhöhen. Dies kann durch eine leichte Vergrößerung oder einen Schatteneffekt geschehen.
+
+### 2. **Moderne Navigationsleiste**
+Gestalten Sie die Navigationsleiste mit einem transparenten Hintergrund und einem schwebenden Effekt, wenn der Benutzer scrollt. Dies sorgt für ein elegantes und modernes Gefühl.
+
+### 3. **Karten mit Bildhintergrund**
+Verwenden Sie Bilder als Hintergrund für Karten, um visuelles Interesse zu erzeugen. Achten Sie darauf, dass der Text gut lesbar bleibt.
+
+### 4. **Fortgeschrittene Animationen**
+Nutzen Sie CSS-Animationen, um Elemente beim Laden der Seite sanft erscheinen zu lassen. Dies kann die Benutzererfahrung erheblich verbessern.
+
+### 5. **Dark Mode**
+Implementieren Sie einen Dark Mode, der es Benutzern ermöglicht, zwischen hellen und dunklen Designs zu wechseln. Dies kann durch einen einfachen Schalter in der Benutzeroberfläche erfolgen.
+
+### Beispiel für erweitertes CSS-Design
+
+Hier ist ein aktualisiertes CSS-Beispiel, das diese neuen Ideen umsetzt:
+
+```css
+/* Stil für Bilder mit Hover-Effekt */
+img:hover {
+    transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
+    transition: transform 0.3s; /* Sanfter Übergang */
+}
+
+/* Stil für die Navigationsleiste */
+.navbar {
+    background: rgba(255, 255, 255, 0.8); /* Transparenter Hintergrund */
+    position: fixed; /* Fixiert beim Scrollen */
+    width: 100%; /* Volle Breite */
+    padding: 10px 20px; /* Innenabstand */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Schatten */
+    transition: background 0.3s; /* Sanfter Übergang */
+}
+
+.navbar.scrolled {
+    background: #fff; /* Vollständiger Hintergrund beim Scrollen */
+}
+
+/* Stil für Karten mit Bildhintergrund */
+.card {
+    background-image: url('path/to/image.jpg'); /* Bild als Hintergrund */
+    background-size: cover; /* Bildabdeckung */
+    color: white; /* Weißer Text */
+}
+
+/* Stil für Animationen beim Laden */
+.fade-in {
+    opacity: 0; /* Unsichtbar */
+    animation: fadeIn 0.5s forwards; /* Fade-In-Animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Sichtbar */
+    }
+}
+
+/* Stil für Dark Mode */
+body.dark-mode {
+    background-color: #121212; /* Dunkler Hintergrund */
+    color: #e0e0e0; /* Heller Text */
+}
+
+.dark-mode .navbar {
+    background: rgba(18, 18, 18, 0.8); /* Dunkler transparenter Hintergrund */
+}
+
+.dark-mode .button {
+    background-color: #bb86fc; /* Akzentfarbe für dunklen Modus */
+}
+
+.dark-mode a {
+    color: #bb86fc; /* Linkfarbe im dunklen Modus */
 }
