@@ -9,8 +9,8 @@
 body {
     font-family: 'Arial', sans-serif; /* Change to your preferred font */
     line-height: 1.6;
-    background-color: #f4f4f4; /* Light background color */
-    color: #333; /* Dark text color */
+    background-color: #eaeaea; /* Hellerer Hintergrund */
+    color: #333; /* Dunkler Text */
 }
 
 /* Container */
@@ -22,8 +22,8 @@ body {
 
 /* Header styles */
 header {
-    background: #333; /* Dark background for header */
-    color: #fff; /* White text */
+    background: #444; /* Dunklerer Hintergrund für Header */
+    color: #fff; /* Weiße Schrift */
     padding: 20px 0;
     text-align: center;
 }
@@ -39,6 +39,7 @@ nav {
 
 nav ul {
     list-style: none;
+    padding: 0; /* Entfernen der Standard-Padding */
 }
 
 nav ul li {
@@ -48,17 +49,18 @@ nav ul li {
 
 nav ul li a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* Unterstreichung entfernen */
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
 /* Main content styles */
 main {
     margin: 20px 0;
+    text-align: center; /* Text zentrieren */
 }
 
 h2 {
@@ -73,7 +75,7 @@ p {
 /* Button styles */
 .button {
     display: inline-block;
-    background: #007BFF; /* Primary button color */
+    background: #007BFF; /* Primäre Buttonfarbe */
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -83,12 +85,12 @@ p {
 }
 
 .button:hover {
-    background: #0056b3; /* Darker shade on hover */
+    background: #0056b3; /* Dunklere Farbe beim Hover */
 }
 
 /* Card styles */
 .card {
-    background: #fff; /* White background for cards */
+    background: #fff; /* Weiße Hintergrundfarbe für Karten */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -102,7 +104,7 @@ p {
 
 /* Footer styles */
 footer {
-    background: #333; /* Dark background for footer */
+    background: #444; /* Dunkler Hintergrund für Footer */
     color: #fff;
     text-align: center;
     padding: 20px 0;
