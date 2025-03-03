@@ -136,3 +136,8 @@ footer {
         text-align: center;
     }
 }
+/* Left-aligned text */
+.left-align {
+    text-align: left; /* Text links ausrichten */
+    margin-left: 20px; /* Optional: Fügen Sie etwas Abstand von der linken Seite hinzu */
+}
