@@ -7,24 +7,25 @@
 
 /* Body styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Futuristische Schriftart */
     line-height: 1.6;
-    background-color: #f4f4f4; /* Heller Hintergrund */
-    color: #333; /* Dunkler Text */
+    background-color: #121212; /* Dunkler Hintergrund */
+    color: #e0e0e0; /* Heller Text */
 }
 
 /* Header styles */
 header {
-    background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient für Header */
+    background: linear-gradient(135deg, #1a1a1a, #333); /* Gradient für Header */
     color: #fff; /* Weiße Schrift */
     padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Neon-Effekt */
 }
 
 /* Navigation styles */
@@ -39,14 +40,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #00bcd4; /* Neonfarbe */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #FFD700; /* Goldene Hover-Farbe */
+    color: #ff4081; /* Hover-Farbe */
 }
 
 /* Main content styles */
@@ -59,9 +60,9 @@ main {
 
 /* Card styles */
 .card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.1); /* Transparenter Hintergrund */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
     position: relative;
@@ -70,15 +71,16 @@ main {
 
 .card:hover {
     transform: translateY(-10px) rotateY(5deg); /* 3D-Effekt beim Hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
 }
 
 .card-header {
-    background: #007BFF; /* Header-Hintergrundfarbe */
+    background: rgba(0, 188, 212, 0.8); /* Header-Hintergrundfarbe */
     color: #fff; /* Weiße Schrift */
     padding: 15px;
     font-weight: bold;
     text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .card-content {
@@ -93,13 +95,13 @@ main {
 }
 
 .card:hover img {
-    transform: scale(1.05); /* Bildvergrößerung beim Hover */
+    transform: scale(1.1); /* Bildvergrößerung beim Hover */
 }
 
 /* Button styles */
 .button {
     display: inline-block;
-    background: #007BFF;
+    background: #00bcd4; /* Neonfarbe */
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -110,18 +112,18 @@ main {
 }
 
 .button:hover {
-    background: #0056b3; /* Dunklere Farbe beim Hover */
+    background: #ff4081; /* Dunklere Farbe beim Hover */
     transform: scale(1.05);
 }
 
 /* Footer styles */
 footer {
-    background: #333; /* Dunkler Hintergrund für Footer */
+    background: #1a1a1a; /* Dunkler Hintergrund für Footer */
     color: #fff;
     text-align: center;
     padding: 20px 0;
     position: relative;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive styles */
