@@ -1,235 +1,129 @@
-/* Grundlegende Stile für die moderne Website */
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
 body {
-    background-color: #f0f0f0; /* Heller Hintergrund */
-    color: #333; /* Dunkler Text */
-    font-family: 'Poppins', sans-serif; /* Moderne Schriftart */
-    line-height: 1.6; /* Bessere Lesbarkeit */
-    margin: 0; /* Entfernen von Standard-Margen */
-    padding: 0; /* Entfernen von Standard-Padding */
+    font-family: 'Arial', sans-serif; /* Change to your preferred font */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color */
 }
 
-/* Header-Stile */
-.navbar {
-    background: rgba(255, 255, 255, 0.9); /* Transparenter Hintergrund */
-    position: fixed; /* Fixiert beim Scrollen */
-    width: 100%; /* Volle Breite */
-    padding: 10px 20px; /* Innenabstand */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Schatten */
-    z-index: 1000; /* Über anderen Elementen */
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between; /* Gleichmäßige Verteilung */
-    align-items: center; /* Vertikale Zentrierung */
-}
-
-.navbar h1.logo {
-    font-family: 'Montserrat', sans-serif; /* Logo-Schriftart */
-    color: #007bff; /* Logo-Farbe */
-}
-
-.navbar nav ul {
-    list-style: none; /* Keine Aufzählungszeichen */
-    display: flex; /* Horizontale Anordnung */
-    gap: 20px; /* Abstand zwischen den Links */
-}
-
-.navbar nav a {
-    color: #333; /* Linkfarbe */
-    text-decoration: none; /* Unterstreichung entfernen */
-    transition: color 0.3s; /* Sanfter Übergang */
-}
-
-.navbar nav a:hover {
-    color: #007bff; /* Farbe bei Hover */
-}
-
-/* Flexibles Layout */
+/* Container */
 .container {
-    display: flex;
-    flex-wrap: wrap; /* Elemente umschließen */
-    justify-content: space-between; /* Gleichmäßige Verteilung */
-    padding: 80px 20px; /* Innenabstand, um Platz für den Header zu schaffen */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Grid-Layout für Inhalte */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibles Grid */
-    gap: 20px; /* Abstand zwischen den Elementen */
+/* Header styles */
+header {
+    background: #333; /* Dark background for header */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    text-align: center;
 }
 
-/* Stil für Call-to-Action-Buttons */
+header h1 {
+    font-size: 2.5em;
+}
+
+/* Navigation styles */
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Button styles */
 .button {
-    background: linear-gradient(90deg, #ff6a00, #ee0979); /* Farbverlauf für den Hintergrund */
-    color: white; /* Weißer Text */
-    border: none; /* Keine Rahmen */
-    padding: 12px 24px; /* Innenabstand */
-    border-radius: 30px; /* Abgerundete Ecken */
-    transition: background 0.3s, transform 0.3s; /* Sanfter Übergang */
-    font-size: 16px; /* Schriftgröße anpassen */
-    cursor: pointer; /* Zeiger ändern sich beim Hover */
+    display: inline-block;
+    background: #007BFF; /* Primary button color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
 .button:hover {
-    background: linear-gradient(90deg, #ee0979, #ff6a00); /* Umgekehrter Farbverlauf bei Hover */
-    transform: translateY(-2px); /* Leichte Anhebung bei Hover */
+    background: #0056b3; /* Darker shade on hover */
 }
 
-/* Stil für Links */
-a {
-    color: #007bff; /* Standard Linkfarbe */
-    text-decoration: none; /* Unterstreichung entfernen */
-    transition: color 0.3s; /* Sanfter Übergang */
+/* Card styles */
+.card {
+    background: #fff; /* White background for cards */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
 }
 
-a:hover {
-    color: #0056b3; /* Dunklere Farbe bei Hover */
-    text-decoration: underline; /* Unterstreichung bei Hover */
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
 }
 
-/* Stil für Fußzeile */
+/* Footer styles */
 footer {
-    background-color: #333; /* Dunkler Hintergrund für die Fußzeile */
-    color: white; /* Weißer Text */
-    text-align: center; /* Zentrierter Text */
-    padding: 20px; /* Innenabstand */
+    background: #333; /* Dark background for footer */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-footer .container {
-    display: flex;
-    flex-direction: column; /* Vertikale Anordnung */
-    align-items: center; /* Zentrierung */
-}
-
-footer ul {
-    list-style: none; /* Keine Aufzählungszeichen */
-    display: flex; /* Horizontale Anordnung */
-    gap: 15px; /* Abstand zwischen den Links */
-}
-
-footer a {
-    color: white; /* Linkfarbe in der Fußzeile */
-    text-decoration: none; /* Unterstreichung entfernen */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Unterstreichung bei Hover */
-}
-
-/* Responsive Bilder */
-img {
-    max-width: 100%; /* Bilder passen sich an den Container an */
-    height: auto; /* Beibehaltung des Seitenverhältnisses */
-    border-radius: 10px; /* Abgerundete Ecken für Bilder */
-}
-
-/* Stil für Karten */
-.card {
-    background-color: white; /* Weißer Hintergrund für Karten */
-    border: none; /* Keine Rahmen */
-    border-radius: 10px; /* Abgerundete Ecken */
-    padding: 20px; /* Innenabstand */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
-    transition: transform 0.3s, box-shadow 0.3s; /* Sanfter Übergang */
-}
-
-.card:hover {
-    transform: translateY(-5px); /* Leichte Anhebung bei Hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Intensivierter Schatten bei Hover */
-}
-
-/* Stil für moderne Überschriften */
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif; /* Moderne Schriftart */
-    color: #222; /* Dunklere Farbe für Überschriften */
-    margin: 10px 0; /* Abstand um Überschriften */
-}
-
-/* Stil für Formulare */
-input, textarea {
-    border: 1px solid #ccc; /* Leichter Rahmen */
-    border-radius: 5px; /* Abgerundete Ecken */
-    padding: 10px; /* Innenabstand */
-    width: 100%; /* Volle Breite */
-    margin-bottom: 15px; /* Abstand zwischen den Feldern */
-    transition: border-color 0.3s; /* Sanfter Übergang */
-}
-
-input:focus, textarea:focus {
-    border-color: #007bff; /* Rahmenfarbe bei Fokus */
-    outline: none; /* Keine Standard-Fokuslinie */
-}
-
-/* Stil für Ladeanimation */
-.loader {
-    border: 8px solid #f3f3f3; /* Heller Hintergrund */
-    border-top: 8px solid #3498db; /* Akzentfarbe */
-    border-radius: 50%; /* Runde Form */
-    width: 50px; /* Breite */
-    height: 50px; /* Höhe */
-    animation: spin 1s linear infinite; /* Animation */
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Stil für Bilder mit Hover-Effekt */
-img:hover {
-    transform: scale(1.05); /* Leichte Vergrößerung bei Hover */
-    transition: transform 0.3s; /* Sanfter Übergang */
-}
-
-/* Stil für die Navigationsleiste */
-.navbar {
-    background: rgba(255, 255, 255, 0.8); /* Transparenter Hintergrund */
-    position: fixed; /* Fixiert beim Scrollen */
-    width: 100%; /* Volle Breite */
-    padding: 10px 20px; /* Innenabstand */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Schatten */
-    transition: background 0.3s; /* Sanfter Übergang */
-}
-
-.navbar.scrolled {
-    background: #fff; /* Vollständiger Hintergrund beim Scrollen */
-}
-
-/* Stil für Karten mit Bildhintergrund */
-.card {
-    background-image: url('path/to/image.jpg'); /* Bild als Hintergrund */
-    background-size: cover; /* Bildabdeckung */
-    color: white; /* Weißer Text */
-}
-
-/* Stil für Animationen beim Laden */
-.fade-in {
-    opacity: 0; /* Unsichtbar */
-    animation: fadeIn 0.5s forwards; /* Fade-In-Animation */
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1; /* Sichtbar */
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
-}
 
-/* Stil für Dark Mode */
-body.dark-mode {
-    background-color: #121212; /* Dunkler Hintergrund */
-    color: #e0e0e0; /* Heller Text */
-}
+    header h1 {
+        font-size: 2em;
+    }
 
-.dark-mode .navbar {
-    background: rgba(18, 18, 18, 0.8); /* Dunkler transparenter Hintergrund */
-}
-
-.dark-mode .button {
-    background-color: #bb86fc; /* Akzentfarbe für dunklen Modus */
-}
-
-.dark-mode a {
-    color: #bb86fc; /* Linkfarbe im dunklen Modus */
+    .button {
+        width: 100%;
+        text-align: center;
+    }
 }
