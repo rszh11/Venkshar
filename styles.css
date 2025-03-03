@@ -1,243 +1,44 @@
-/* Globale Variablen */
-:root {
-    --primary-color: #007bff; /* Hauptfarbe */
-    --secondary-color: #6c757d; /* Sekundärfarbe */
-    --accent-color: #28a745; /* Akzentfarbe */
-    --background-color: #f8f9fa; /* Hintergrundfarbe */
-    --text-color: #343a40; /* Textfarbe */
-    --light-background: #ffffff; /* Heller Hintergrund */
-    --footer-background: #343a40; /* Dunkler Footer */
-    --border-color: #ced4da; /* Rahmenfarbe */
-}
-
-/* Globale Stile */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    animation: fadeIn 0.5s ease;
-}
-
 /* Header */
 header {
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #007bff, #0056b3);
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #ffffff;
-}
-
-/* Hauptinhalt */
-main {
-    padding: 20px;
-}
-
-/* Sektionen */
+/* Main Content */
 section {
-    background: var(--light-background);
+    background: #f8f9fa;
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 section:hover {
-    transform: scale(1.02);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-section h2 {
-    color: var(--accent-color);
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-/* Aufzählung */
-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-section ul li {
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--footer-background);
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Formulare */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    background-color: var(--light-background);
-    color: var(--text-color);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-form input:focus, form textarea:focus {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
-    outline: none;
-}
-
-form button {
-    padding: 10px;
-    margin-top: 10px;
-    background-color: var(--accent-color);
-    color: #ffffff;
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
 }
 
-form button:hover {
-    background-color: #218838; /* Dunklerer Grünton beim Hover */
+button:hover {
+    background: #0056b3;
 }
 
-/* Medienabfragen */
+/* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
+    header {
+        font-size: 1.5em;
     }
-
+    
     section {
         margin: 10px 0;
-    }
-
-    form {
-        width: 100%;
-    }
-}
-
-/* Animationen */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Zusätzliche Stile */
-h1, h2, h3 {
-    font-family: 'Arial', sans-serif;
-    text-transform: none;
-}
-
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-a:hover {
-    text-shadow: 0 0 5px var(--accent-color);
-}
-
-/* Tabellen */
-table {
-    width: 100%;
-    border-collapse: collapse;
- margin: 20px 0;
-}
-
-th, td {
-    padding: 15px;
-    border: 1px solid var(--border-color);
-    text-align: left;
-}
-
-th {
-    background-color: var(--light-background);
-    color: var(--accent-color);
-}
-
-/* Zusätzliche Anpassungen für Buttons */
-button:disabled {
-    background-color: var(--border-color);
-    cursor: not-allowed;
-}
-
-/* Zusätzliche Stile für bessere Benutzererfahrung */
-input::placeholder, textarea::placeholder {
-    color: var(--secondary-color); /* Platzhalterfarbe */
-    opacity: 0.7; /* Leichte Transparenz für Platzhalter */
-}
-
-input[type="checkbox"], input[type="radio"] {
-    margin-right: 10px; /* Abstand für Checkboxen und Radiobuttons */
-}
-
-/* Kartenstil für Sektionen */
-.card {
-    background: var(--light-background);
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px 0;
-}
-
-/* Hover-Effekte für Links */
-a {
-    position: relative;
-}
-
-a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: var(--accent-color);
-    left: 0;
-    bottom: -5px;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-a:hover::after {
-    transform: scaleX(1);
-}
-
-/* Responsive Tabellen */
-@media (max-width: 768px) {
-    table {
-        display: block;
-        overflow-x: auto; /* Scrollen bei kleinen Bildschirmen */
-        white-space: nowrap; /* Verhindert Zeilenumbruch */
     }
 }
