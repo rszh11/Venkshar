@@ -1,44 +1,79 @@
-/* Header */
+/* Header Styling */
 header {
     background: linear-gradient(135deg, #007bff, #0056b3);
     padding: 20px;
     text-align: center;
+    color: #fff; /* Ensure text is visible on gradient background */
+    font-size: 2rem; /* Consistent font sizing for readability */
+    font-weight: bold; /* Make header text stand out */
+    letter-spacing: 1px; /* Slightly increase space between letters for a clean look */
 }
 
-/* Main Content */
+/* Main Content Section Styling */
 section {
-    background: #f8f9fa;
+    background: #f8f9fa; /* Light background for contrast */
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
-    transition: box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add default subtle shadow for depth */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
 }
 
+/* Hover Effects for Sections */
 section:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
-/* Buttons */
+/* Button Styling */
 button {
     background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    transition: background 0.3s ease;
+    font-size: 1rem; /* Consistent font size */
+    font-weight: 600; /* Slightly bold text for better readability */
+    cursor: pointer; /* Indicate that the button is clickable */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth background and scale transition */
 }
 
+/* Button Hover Effects */
 button:hover {
     background: #0056b3;
+    transform: scale(1.05); /* Slight scale effect on hover */
 }
 
-/* Responsive Design */
+/* Accessibility: Focus Styles */
+button:focus, header:focus {
+    outline: 3px solid #ffcc00; /* Provide clear focus indication for accessibility */
+    outline-offset: 2px;
+}
+
+/* Responsive Design: Mobile Optimization */
 @media (max-width: 768px) {
     header {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Adjust header font size for smaller screens */
     }
-    
+
     section {
-        margin: 10px 0;
+        margin: 10px 0; /* Reduce margins for better space usage on smaller devices */
     }
+
+    button {
+        padding: 8px 16px; /* Slightly reduce padding for buttons on smaller screens */
+    }
+}
+
+/* Performance: Avoid excessive reflows and repaints */
+* {
+    box-sizing: border-box; /* Ensures padding and borders don't affect element size */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Use a clean, readable font */
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; /* Light background for the page */
+    color: #343a40; /* Text color for good contrast */
 }
