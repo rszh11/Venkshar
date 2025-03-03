@@ -147,8 +147,11 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed; /* Fixiert den Footer */
+    bottom: 0; /* Am unteren Rand des Bildschirms */
+    left: 0; /* Links ausrichten */
+    width: 100%; /* Breite auf 100% setzen */
+    z-index: 1000; /* Sicherstellen, dass der Footer über anderen Inhalten liegt */
 }
 
 /* Form styles */
