@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     background-color: #eaeaea; /* Hellerer Hintergrund */
     color: #333; /* Dunkler Text */
+    padding-bottom: 60px; /* Platz für den fixierten Footer */
 }
 
 /* Container */
@@ -72,6 +73,11 @@ p {
     margin-bottom: 15px;
 }
 
+/* Left-aligned text */
+.left-align {
+    text-align: left; /* Text links ausrichten */
+}
+
 /* Button styles */
 .button {
     display: inline-block;
@@ -108,9 +114,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    position: fixed; /* Fixiert den Footer */
+    bottom: 0; /* Am unteren Rand des Bildschirms */
+    left: 0; /* Links ausrichten */
+    width: 100%; /* Breite auf 100% setzen */
 }
 
 /* Responsive styles */
