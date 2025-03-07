@@ -50,6 +50,13 @@ nav ul li a:hover {
     color: #ff4081; /* Hover-Farbe */
 }
 
+.nav-icon {
+    max-width: 25px; /* Setze die maximale Breite auf 25 Pixel */
+    height: auto; /* Automatische Höhe, um das Seitenverhältnis zu wahren */
+    margin-left: 5px; /* Abstand zwischen Text und Logo */
+    vertical-align: middle; /* Vertikale Ausrichtung */
+}
+
 /* Hero section styles */
 .hero {
     background: url('hero-background.jpg') no-repeat center center/cover; /* Dynamischer Hintergrund */
