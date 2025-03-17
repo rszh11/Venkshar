@@ -200,6 +200,17 @@ form button {
         text-align: center;
     }
 }
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Vertikale Anordnung auf kleinen Bildschirmen */
+        align-items: center; /* Zentriert die Links */
+        width: 100%; /* Volle Breite */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Abstand zwischen den Links */
+    }
+}
 footer {
     background: #333;
     color: white;
