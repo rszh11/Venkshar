@@ -250,3 +250,15 @@ footer {
     margin-top: 20px;
     font-size: 0.9em;
 }
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0; /* Anfangspadding */
+    margin-top: 20px;
+    transition: height 0.3s ease, padding 0.3s ease; /* Übergang für Höhe und Padding */
+    overflow: hidden; /* Verhindert, dass der Inhalt überläuft */
+}
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
