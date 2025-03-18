@@ -249,10 +249,6 @@ footer {
     margin: 3px 0; /* Reduziertes Margin */
 }
 
-.socials a:hover {
-    text-decoration: underline;
-}
-
 .footer-bottom {
     text-align: center;
     margin-top: 10px; /* Reduziertes Margin */
