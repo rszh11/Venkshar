@@ -43,7 +43,6 @@ function getBotResponse(input) {
     } else if (input.toLowerCase() === 'hilfe') {
         return 'Was genau benötigen Sie Hilfe mit?';
     } else {
-        // Hier können Sie eine E-Mail senden oder eine andere Aktion ausführen
         return 'Es tut mir leid, ich kann Ihnen dabei nicht helfen.';
     }
 }
