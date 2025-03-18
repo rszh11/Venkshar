@@ -249,11 +249,6 @@ footer {
     margin: 3px 0; /* Reduziertes Margin */
 }
 
-.socials a {
-    color: #007bff;
-    text-decoration: none;
-}
-
 .socials a:hover {
     text-decoration: underline;
 }
@@ -274,13 +269,6 @@ blockquote {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
-}
-
-header {
-    background: #0056b3;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
 }
 
 header h1 {
