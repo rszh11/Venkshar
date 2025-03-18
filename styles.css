@@ -312,8 +312,9 @@ ul li {
 .faq-item {
     margin-bottom: 15px;
 }
+
+/* Header und Footer Listen anpassen */
 header ul,
-nav ul,
 footer ul {
     list-style-type: none; /* Entfernt die Aufzählungszeichen */
     padding: 0; /* Entfernt das Padding */
@@ -321,3 +322,24 @@ footer ul {
     background: none; /* Setzt den Hintergrund auf transparent */
 }
 
+header ul li,
+footer ul li {
+    display: inline; /* Zeigt die Links in einer Reihe an */
+    margin: 0 20px; /* Abstand zwischen den Links */
+    background: none; /* Entfernt den Hintergrund */
+    padding: 0; /* Entfernt das Padding */
+}
+
+/* Optional: Stil für Links im Header und Footer */
+header ul li a,
+footer ul li a {
+    color: #00bcd4; /* Neonfarbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    font-weight: bold; /* Fettgedruckt */
+    transition: color 0.3s; /* Übergangseffekt für die Farbe */
+}
+
+header ul li a:hover,
+footer ul li a:hover {
+    color: #ff4081; /* Hover-Farbe */
+}
