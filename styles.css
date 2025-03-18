@@ -312,3 +312,12 @@ ul li {
 .faq-item {
     margin-bottom: 15px;
 }
+header ul,
+nav ul,
+footer ul {
+    list-style-type: none; /* Entfernt die Aufzählungszeichen */
+    padding: 0; /* Entfernt das Padding */
+    margin: 0; /* Entfernt das Margin */
+    background: none; /* Setzt den Hintergrund auf transparent */
+}
+
