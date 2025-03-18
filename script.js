@@ -19,7 +19,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const formData = new FormData(this);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('/send_email', {
+    fetch('send_email.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
