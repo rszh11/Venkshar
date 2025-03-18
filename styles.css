@@ -339,3 +339,32 @@ header ul li a:hover,
 footer ul li a:hover {
     color: #e2e2e2; /* Hover-Farbe */
 }
+
+.chat-container {
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+}
+
+.chat-box {
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.chat-message {
+    margin: 5px 0;
+}
+
+.user {
+    text-align: right;
+}
+
+.bot {
+    text-align: left;
+}
