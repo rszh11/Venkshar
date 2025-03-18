@@ -340,16 +340,6 @@ footer ul li a:hover {
     color: #e2e2e2; /* Hover-Farbe */
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e9ecef;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
 .chat-container {
     width: 400px;
     border-radius: 10px;
