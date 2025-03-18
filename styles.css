@@ -263,3 +263,14 @@ footer {
     margin-top: 10px; /* Reduziertes Margin */
     font-size: 0.8em; /* Kleinere Schriftgröße */
 }
+#cookie-banner {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
