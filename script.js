@@ -12,3 +12,26 @@ window.addEventListener('scroll', function() {
     footer.style.height = newHeight + 'px'; // Setzen der neuen Höhe
     footer.style.padding = newHeight > 50 ? '20px 0' : '10px 0'; // Anpassen des Paddings
 });
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Verhindert das Standardverhalten des Formulars
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    fetch('/send_email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('responseMessage').textContent = data.message;
+        document.getElementById('contactForm').reset(); // Formular zurücksetzen
+    })
+    .catch((error) => {
+        console.error('Fehler:', error);
+    });
+});
