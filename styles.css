@@ -9,7 +9,7 @@
 body {
     font-family: 'Roboto', sans-serif; /* Futuristische Schriftart */
     line-height: 1.6;
-    background-color: #EDEDED; /* Dunkler Hintergrund */
+    background-color: #FFFFFF; /* Dunkler Hintergrund */
     color: #5C5C5C; /* Heller Text */
 }
 
@@ -48,7 +48,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff4081; /* Hover-Farbe */
+    color: #87cefa; /* Neonfarbe */
 }
 
 .nav-icon {
