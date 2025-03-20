@@ -42,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #00bcd4; /* Neonfarbe */
+    color: #0d0d0d; /* Neonfarbe */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
