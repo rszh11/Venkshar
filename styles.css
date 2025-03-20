@@ -17,7 +17,7 @@ body {
 header {
     /* background: linear-gradient(135deg, #1a1a1a, #333); /* Gradient für Header */
     background: linear-gradient(#87ceff, #00cdcd);
-    color: #0d0d0d; /* Weiße Schrift */
+    color: #f0f8ff; /* Weiße Schrift */
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -329,7 +329,7 @@ footer ul li {
 
 /* Optional: Stil für Links im Header und Footer */
 header ul li a {
-    color: #0d0d0d; /* Neonfarbe */
+    color: #f0f8ff; /* Neonfarbe */
     text-decoration: none; /* Entfernt die Unterstreichung */
     font-weight: bold; /* Fettgedruckt */
     transition: color 0.3s; /* Übergangseffekt für die Farbe */
