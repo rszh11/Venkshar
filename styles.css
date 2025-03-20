@@ -328,7 +328,13 @@ footer ul li {
 }
 
 /* Optional: Stil für Links im Header und Footer */
-header ul li a,
+header ul li a {
+    color: #0d0d0d; /* Neonfarbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    font-weight: bold; /* Fettgedruckt */
+    transition: color 0.3s; /* Übergangseffekt für die Farbe */
+}
+
 footer ul li a {
     color: #00bcd4; /* Neonfarbe */
     text-decoration: none; /* Entfernt die Unterstreichung */
