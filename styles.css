@@ -135,7 +135,7 @@ main {
 /* Button styles */
 .button {
     display: inline-block;
-    background: #00bcd4; /* Neonfarbe */
+    background: #0d0d0d; /* Neonfarbe */
     color: #fff;
     padding: 10px 20px;
     border: none;
