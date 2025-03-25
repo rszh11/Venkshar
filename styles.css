@@ -359,7 +359,7 @@ footer ul li a:hover {
 .card {
   width: fit-content;
   height: fit-content;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(44, 44, 44);
   display: flex;
   align-items: center;
   justify-content: center;
