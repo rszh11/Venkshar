@@ -156,7 +156,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: fixed; /* Fixiert den Footer */
     bottom: 0; /* Am unteren Rand des Bildschirms */
     left: 0; /* Links ausrichten */
     width: 100%; /* Breite auf 100% setzen */
@@ -210,6 +209,16 @@ form button {
 
     nav ul li {
         margin: 10px 0; /* Abstand zwischen den Links */
+    }
+}
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Einspaltiges Layout auf kleinen Bildschirmen */
+    }
+
+    .button {
+        width: 100%; /* Volle Breite für Buttons auf kleinen Bildschirmen */
     }
 }
 footer {
