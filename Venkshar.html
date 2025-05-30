@@ -1,4 +1,11 @@
-/* Reset and base */
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Venkshar</title>
+<style>
+  /* Reset and base */
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -555,3 +562,228 @@
       width: 100%;
     }
   }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header role="banner">
+  <div class="container">
+    <div class="logo" aria-label="Buchhaltungsfirma Logo">Venkshar Financial AG</div>
+    <nav role="navigation" aria-label="Hauptnavigation">
+      <a href="#services" tabindex="0">Leistungen</a>
+      <a href="#clients" tabindex="0">Kunden</a>
+      <a href="#pricing" tabindex="0">Preise</a>
+      <a href="#contact" tabindex="0">Kontakt</a>
+      <a href="about.html" tabindex="0">Venkshar</a>
+    </nav>
+    <button class="btn-contact" id="btn-contact" aria-haspopup="dialog" aria-controls="chat-panel">Kontakt & Chat</button>
+  </div>
+</header>
+
+<section class="hero" role="region" aria-label="Hero Bereich">
+  <div class="container">
+    <h1>Ihr vertrauenswürdiger Partner für Buchhaltung & Beratung</h1>
+    <p>Effiziente, digitale Buchhaltungslösungen für Unternehmen jeder Grösse. Persönlich, professionell und transparent.</p>
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Kostenlose Beratung anfragen</button>
+  </div>
+</section>
+
+<section id="services" class="features" role="region" aria-labelledby="services-title">
+  <h2 id="services-title" class="section-title">Unsere Leistungen</h2>
+  <div class="feature-grid" role="list">
+    <article class="feature" role="listitem" tabindex="0">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM10 17h4v-2h-4v2zm7-7h-4v5h2v-3h2v-2h0zm-8.114 3.904 1.554-4.352 1.236.582-.873 1.555c.256-.061.51-.11.783-.095h.004v.004c.462.022.983.144 1.43.408a1 1 0 01.11 1.67l-4.143 3.208z"/></svg>
+      <h3>Digitale Buchhaltung</h3>
+      <p>Sämtliche Buchungen werden digital und automatisiert erfasst, inkl. Belegmanagement.</p>
+    </article>
+    <article class="feature" role="listitem" tabindex="0">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 10h-4V0H9v10H5l7 7 7-7zM7.75 14.5c.97 0 1.75.78 1.75 1.75s-.78 1.75-1.75 1.75S6 17.22 6 16.25s.78-1.75 1.75-1.75z"/></svg>
+      <h3>Lohnbuchhaltung</h3>
+      <p>Reibungslose Lohnabrechnung und Sozialversicherung – rechtssicher und pünktlich.</p>
+    </article>
+    <article class="feature" role="listitem" tabindex="0">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10h-2V7H5v6h2v4H3v-6c0-1.1.9-2 2-2h12v2h2v-3z"/></svg>
+      <h3>Mehrwertsteuer & Steuerberatung</h3>
+      <p>Optimale Steuerstrategie dank professioneller Beratung für Ihr Unternehmen.</p>
+    </article>
+    <article class="feature" role="listitem" tabindex="0">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.27 3.9 9.55 9 10 5.1-.45 9-4.73 9-10V5l-9-4z"/></svg>
+      <h3>Individuelle Beratung</h3>
+      <p>Persönliche Beratung als vertrauensvoller Partner für Ihre Finanzstrategie.</p>
+    </article>
+  </div>
+</section>
+
+<section id="clients" class="testimonials" aria-label="Kundenreferenzen">
+  <h2 class="section-title-1">Unsere zufriedenen Kunden</h2>
+  <div class="testimonial-list">
+    <blockquote class="testimonial" tabindex="0">
+      <p>Die Zusammenarbeit ist professionell und unkompliziert. Unsere Buchhaltung ist nun stressfrei und transparent.</p>
+      <cite>– Firma Müller AG</cite>
+    </blockquote>
+    <blockquote class="testimonial" tabindex="0">
+      <p>Kompetente Beratung und schnelle Reaktionszeiten. Das Team fühlt sich tatsächlich als Partner und nicht nur Dienstleister an.</p>
+      <cite>– Schmidt & Sohn GmbH</cite>
+    </blockquote>
+    <blockquote class="testimonial" tabindex="0">
+      <p>Die Digitalisierung unserer Buchhaltungsprozesse hat uns enorm entlastet und wertvolle Zeit gespart.</p>
+      <cite>– Tech Solutions AG</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="pricing" class="pricing" aria-label="Preise und Pakete">
+  <h2 class="section-title">Preisübersicht</h2>
+  <div class="pricing-plans">
+    <div class="plan" tabindex="0" aria-label="Basis Paket">
+      <h3>Basis</h3>
+      <p class="plan-price">CHF 250<span style="font-size: 1rem;">/Monat</span></p>
+      <p class="plan-subtext">Für kleine Unternehmen</p>
+      <ul class="plan-features">
+        <li>Digitale Buchhaltung</li>
+        <li>Lohnabrechnung für bis zu 5 Mitarbeiter</li>
+        <li>Monatliche Auswertung</li>
+      </ul>
+      <button class="btn-select-plan">Jetzt auswählen</button>
+    </div>
+    <div class="plan" tabindex="0" aria-label="Standard Paket">
+      <h3>Standard</h3>
+      <p class="plan-price">CHF 480<span style="font-size: 1rem;">/Monat</span></p>
+      <p class="plan-subtext">Für mittelgrosse Unternehmen</p>
+      <ul class="plan-features">
+        <li>Alles aus Basis Paket</li>
+        <li>Lohnabrechnung für bis zu 20 Mitarbeiter</li>
+        <li>Individuelle Steuerberatung</li>
+      </ul>
+      <button class="btn-select-plan">Jetzt auswählen</button>
+    </div>
+    <div class="plan" tabindex="0" aria-label="Premium Paket">
+      <h3>Premium</h3>
+      <p class="plan-price">Auf Anfrage</p>
+      <p class="plan-subtext">Für grosse Unternehmen und Konzerne</p>
+      <ul class="plan-features">
+        <li>Alle Leistungen Standard Paket</li>
+        <li>Persönlicher Berater</li>
+        <li>Individuelle Finanzplanung & Consulting</li>
+      </ul>
+      <button class="btn-select-plan">Kontakt aufnehmen</button>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact" aria-label="Kontaktformular">
+  <h2 class="section-title">Kontaktieren Sie uns</h2>
+  <form class="contact-form" id="contact-form" novalidate>
+    <label for="name">Ihr Name</label>
+    <input type="text" id="name" name="name" required placeholder="Thirunathan Kanagaratnam" />
+    <label for="email">Ihre E-Mail</label>
+    <input type="email" id="email" name="email" required placeholder="tkanagaratnam@venkshar.com" />
+    <label for="message">Ihre Nachricht</label>
+    <textarea id="message" name="message" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+    <button type="submit" class="btn-submit">Nachricht senden</button>
+  </form>
+</section>
+
+<button id="chat-open-btn" aria-haspopup="dialog" aria-controls="chat-panel" aria-label="Chat mit Buchhaltungsfirma öffnen">Chat starten</button>
+
+<div id="chat-panel" role="dialog" aria-modal="true" aria-labelledby="chat-header" aria-hidden="true" hidden>
+  <div id="chat-header">
+    Buchhaltungs Chat
+    <button id="chat-close-btn" aria-label="Chat schliessen">&times;</button>
+  </div>
+  <div id="chat-messages" tabindex="0" aria-live="polite" aria-relevant="additions"></div>
+  <form id="chat-form" aria-label="Chat Nachricht senden" novalidate>
+    <div id="chat-input-area">
+      <input id="chat-input" type="text" placeholder="Schreiben Sie eine Nachricht..." autocomplete="off" aria-label="Nachricht eingeben" required />
+      <button type="submit" id="chat-send-btn" aria-label="Nachricht senden">Senden</button>
+    </div>
+  </form>
+</div>
+
+<footer role="contentinfo" class="container" style="text-align:center; padding:1.6rem 0; font-size:0.9rem; color:#6b7280;">
+  &copy; 2025 Venkshar Financial AG. Alle Rechte vorbehalten.
+</footer>
+
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target){
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Chat panel logic
+  const chatOpenBtn = document.getElementById('chat-open-btn');
+  const chatPanel = document.getElementById('chat-panel');
+  const chatCloseBtn = document.getElementById('chat-close-btn');
+  const chatForm = document.getElementById('chat-form');
+  const chatInput = document.getElementById('chat-input');
+  const chatMessages = document.getElementById('chat-messages');
+
+  chatOpenBtn.addEventListener('click', () => {
+    chatPanel.hidden = false;
+    chatPanel.setAttribute('aria-hidden', 'false');
+    chatPanel.classList.add('visible');
+    chatInput.focus();
+  });
+
+  chatCloseBtn.addEventListener('click', () => {
+    chatPanel.classList.remove('visible');
+    chatPanel.setAttribute('aria-hidden', 'true');
+    setTimeout(() => chatPanel.hidden = true, 300);
+    chatOpenBtn.focus();
+  });
+
+  chatForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const msg = chatInput.value.trim();
+    if (!msg) return;
+    appendMessage(msg, 'client');
+    chatInput.value = '';
+    replyFromStaff(msg);
+  });
+
+  function appendMessage(text, sender) {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('chat-message', sender === 'client' ? 'client' : 'staff');
+    msgDiv.textContent = text;
+    chatMessages.appendChild(msgDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  function replyFromStaff(userMsg) {
+    setTimeout(() => {
+      const replies = [
+        "Vielen Dank für Ihre Nachricht. Wie können wir Ihnen helfen?",
+        "Wir kümmern uns schnellstmöglich um Ihr Anliegen.",
+        "Ein Mitarbeiter wird sich umgehend bei Ihnen melden.",
+        "Können Sie uns bitte weitere Details mitteilen?"
+      ];
+      const reply = replies[Math.floor(Math.random() * replies.length)];
+      appendMessage(reply, 'staff');
+    }, 1500);
+  }
+
+  // Contact form validation and submission (mock)
+  const contactForm = document.getElementById('contact-form');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = contactForm.name.value.trim();
+    const email = contactForm.email.value.trim();
+    const message = contactForm.message.value.trim();
+    if(!name || !email || !message){
+      alert('Bitte alle Felder ausfüllen.');
+      return;
+    }
+    // Mock submission
+    alert(`Danke, ${name}. Ihre Nachricht wurde gesendet.`);
+    contactForm.reset();
+  });
+</script>
+
+</body>
+</html>
