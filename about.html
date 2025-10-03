@@ -7,6 +7,565 @@
   <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet" />
 </head>
+  <style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f4f4f7;
+    color: #2c3e50;
+    scroll-behavior: smooth;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    background: #0f3057;
+    color: #f9f6f0;
+    padding: 1rem 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(15,48,87,0.5);
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo {
+    font-weight: 900;
+    font-size: 1.65rem;
+    letter-spacing: 0.08em;
+  }
+  nav {
+    display: flex;
+    gap: 1.75rem;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #f9f6f0;
+    padding: 0.375rem 0.75rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  nav a:hover,
+  nav a:focus {
+    background-color: #9f7b53;
+    color: #fffdfa;
+    outline: none;
+    box-shadow: 0 0 8px #9f7b53aa;
+  }
+  .btn-contact {
+    background-color: #9f7b53;
+    color: #fffdfa;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background-color 0.3s ease;
+  }
+  .btn-contact:hover,
+  .btn-contact:focus {
+    background-color: #a97f52;
+  }
+
+  /* Hero */
+  section.hero {
+    background: linear-gradient(135deg, #0f3057 0%, #203f7f 100%);
+    color: #f9f6f0;
+    text-align: center;
+    padding: 7rem 1rem 5rem;
+  }
+  section.hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.hero p {
+    font-size: 1.25rem;
+    line-height: 1.45;
+    max-width: 520px;
+    margin: 0 auto 2.8rem;
+    opacity: 0.85;
+  }
+  section.hero button.btn-primary {
+    background-color: #9f7b53;
+    border: none;
+    color: #fffdfa;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background-color 0.3s ease;
+  }
+  section.hero button.btn-primary:hover {
+    background-color: #a97f52;
+  }
+
+  /* Features */
+  section.features {
+    padding: 4rem 0 3rem;
+    background: #faf8f5;
+  }
+  section.features h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.8rem;
+    margin-bottom: 3.4rem;
+    color: #153243;
+  }
+  .feature-grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.6rem;
+  }
+  article.feature {
+    background: white;
+    padding: 2.5rem 1.8rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 22px rgb(43 48 64 / 0.06);
+    color: #374151;
+    transition: box-shadow 0.3s ease;
+    cursor: default;
+  }
+  article.feature:hover,
+  article.feature:focus-within {
+    box-shadow: 0 15px 38px rgb(43 48 64 / 0.12);
+    outline: none;
+  }
+  article.feature svg {
+    fill: #9f7b53;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 1.2rem;
+  }
+  article.feature h3 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+  }
+  article.feature p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Testimonials */
+  section.testimonials {
+    background: #0f3057;
+    color: #fffdfa;
+    padding: 3.8rem 1rem 4rem;
+  }
+  section.testimonials h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.4rem;
+    margin-bottom: 2.7rem;
+  }
+  .testimonial-list {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+  }
+  blockquote.testimonial {
+    flex: 1 1 320px;
+    background: #1b3a6d;
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgb(0 0 0 / 0.25);
+    padding: 2rem 2rem 2.4rem;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  blockquote.testimonial p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.7rem;
+  }
+  blockquote.testimonial cite {
+    font-weight: 700;
+    font-style: normal;
+    align-self: flex-end;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* Pricing */
+  section.pricing {
+    padding: 4rem 0 4.5rem;
+  }
+  section.pricing h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    color: #153243;
+  }
+  .pricing-plans {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .plan {
+    background: white;
+    padding: 3rem 2.8rem 3.6rem;
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgb(43 48 64 / 0.06);
+    flex: 1 1 280px;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .plan:hover,
+  .plan:focus-within {
+    box-shadow: 0 14px 36px rgb(43 48 64 / 0.18);
+    outline: none;
+  }
+  .plan h3 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #153243;
+  }
+  .plan-price {
+    font-weight: 800;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+    color: #9f7b53;
+  }
+  .plan-subtext {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.012em;
+    color: #64748b;
+    margin-bottom: 2rem;
+  }
+  ul.plan-features {
+    list-style: none;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+  ul.plan-features li {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #374151;
+    display: flex;
+    align-items: center;
+  }
+  ul.plan-features li::before {
+    content: "✓";
+    color: #9f7b53;
+    margin-right: 0.7rem;
+    font-weight: 700;
+  }
+  .btn-select-plan {
+    background-color: #9f7b53;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.6rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 0.03em;
+    transition: background-color 0.3s ease;
+  }
+  .btn-select-plan:hover,
+  .btn-select-plan:focus {
+    background-color: #a9855b;
+    outline: none;
+  }
+
+  /* Contact Section */
+  section.contact {
+    background: #faf8f5;
+    padding: 5rem 1rem 5rem;
+  }
+  section.contact h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.6rem;
+    color: #153243;
+    margin-bottom: 3.2rem;
+  }
+  .contact-form {
+    max-width: 520px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgb(43 48 64 / 0.12);
+    padding: 3rem 2.8rem;
+  }
+  .contact-form label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #374151;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.65rem 1rem;
+    margin-bottom: 1.8rem;
+    border-radius: 12px;
+    border: 1.5px solid #ced4da;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #9f7b53;
+    background-color: #fff9e7;
+  }
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+  .btn-submit {
+    background-color: #9f7b53;
+    color: white;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 0.03em;
+    transition: background-color 0.3s ease;
+  }
+  .btn-submit:hover,
+  .btn-submit:focus {
+    background-color: #a9855b;
+    outline: none;
+  }
+
+  /* Chat button */
+  #chat-open-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #9f7b53;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 26px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    cursor: pointer;
+    box-shadow: 0 8px 26px rgba(159,123,83,0.5);
+    transition: background-color 0.3s ease;
+    z-index: 1200;
+  }
+  #chat-open-btn:hover,
+  #chat-open-btn:focus {
+    background-color: #a9855b;
+    outline: none;
+  }
+
+  /* Chat box */
+  #chat-panel {
+    position: fixed;
+    bottom: 75px;
+    right: 30px;
+    width: 370px;
+    max-height: 520px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 38px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(25px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 1300;
+  }
+  #chat-panel.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  #chat-header {
+    background-color: #9f7b53;
+    color: #f8f4e9;
+    padding: 1.2rem 1.6rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #chat-close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #f8f4e9;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+  }
+  #chat-messages {
+    flex: 1;
+    padding: 1rem 1.4rem;
+    overflow-y: auto;
+    background: #fffdf7;
+    border-top: 1px solid #eadfbb;
+    border-bottom: 1px solid #eadfbb;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    font-size: 0.9rem;
+  }
+  .chat-message {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    box-shadow: 0 3px 12px rgba(159,123,83,0.3);
+    line-height: 1.4;
+  }
+  .chat-message.client {
+    background: #f1ede2;
+    color: #5a4f3b;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .chat-message.staff {
+    background: #9f7b53;
+    color: #f8f4e9;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  #chat-input-area {
+    display: flex;
+    padding: 1rem 1.3rem;
+    gap: 12px;
+    background: #f7f4e9;
+  }
+  #chat-input {
+    flex: 1;
+    border-radius: 40px;
+    border: 1.8px solid #eadfbb;
+    padding: 11px 18px;
+    font-size: 1rem;
+    outline-offset: 2px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+  }
+  #chat-input:focus {
+    border-color: #9f7b53;
+  }
+  #chat-send-btn {
+    background-color: #9f7b53;
+    border: none;
+    color: #f8f4e9;
+    padding: 11px 28px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  #chat-send-btn:hover,
+  #chat-send-btn:focus {
+    background-color: #ad8c64;
+    outline: none;
+  }
+
+  /* Section Titles */
+  h2.section-title {
+    font-weight: 900;
+    font-size: 2.75rem;
+    color: #153243;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+    /* Section Titles */
+    h2.section-title-1 {
+    font-weight: 900;
+    font-size: 2.75rem;
+    color: #289adc;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .feature-grid,
+    .testimonial-list,
+    .pricing-plans {
+      grid-template-columns: 1fr !important;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+    #chat-panel {
+      right: 50%;
+      transform: translateX(50%);
+      width: 90vw;
+      max-height: 350px;
+      border-radius: 18px;
+    }
+    header .container {
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+    nav {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>
 <body>
   <header role="banner">
     <div class="container">
