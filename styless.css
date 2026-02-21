@@ -1,12 +1,12 @@
 /* Reset and base */
-  *, *::before, *::after {
+*, *::before, *::after {
     box-sizing: border-box;
   }
   body {
     font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background: #f4f4f7;
-    color: #182323;
+    color: #2c3e50;
     scroll-behavior: smooth;
   }
   a {
@@ -23,13 +23,13 @@
 
   /* Header */
   header {
-    background: #1c3738;
-    color: #f4fff8;
+    background: #0f3057;
+    color: #f9f6f0;
     padding: 1rem 0.75rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 3px 10px #182323;
+    box-shadow: 0 3px 10px rgba(15,48,87,0.5);
   }
   header .container {
     display: flex;
@@ -55,13 +55,13 @@
   }
   nav a:hover,
   nav a:focus {
-    background-color: #8baaad;
+    background-color: #9f7b53;
     color: #fffdfa;
     outline: none;
-    box-shadow: 0 0 8px #8baaad;
+    box-shadow: 0 0 8px #9f7b53aa;
   }
   .btn-contact {
-    background-color: #8baaad;
+    background-color: #9f7b53;
     color: #fffdfa;
     border: none;
     padding: 0.5rem 1.2rem;
@@ -74,12 +74,12 @@
   }
   .btn-contact:hover,
   .btn-contact:focus {
-    background-color: #8baaad;
+    background-color: #a97f52;
   }
 
   /* Hero */
   section.hero {
-    background: #d9dbe2;
+    background: linear-gradient(135deg, #0f3057 0%, #203f7f 100%);
     color: #f9f6f0;
     text-align: center;
     padding: 7rem 1rem 5rem;
@@ -101,7 +101,7 @@
     opacity: 0.85;
   }
   section.hero button.btn-primary {
-    background-color: #8baaad;
+    background-color: #9f7b53;
     border: none;
     color: #fffdfa;
     font-weight: 700;
@@ -113,13 +113,13 @@
     transition: background-color 0.3s ease;
   }
   section.hero button.btn-primary:hover {
-    background-color: #8baaad;
+    background-color: #a97f52;
   }
 
   /* Features */
   section.features {
     padding: 4rem 0 3rem;
-    background: white;
+    background: #faf8f5;
   }
   section.features h2 {
     text-align: center;
@@ -140,7 +140,7 @@
     padding: 2.5rem 1.8rem;
     border-radius: 14px;
     box-shadow: 0 6px 22px rgb(43 48 64 / 0.06);
-    color: #1c3738;
+    color: #374151;
     transition: box-shadow 0.3s ease;
     cursor: default;
   }
@@ -150,7 +150,7 @@
     outline: none;
   }
   article.feature svg {
-    fill: #8baaad;
+    fill: #9f7b53;
     width: 36px;
     height: 36px;
     margin-bottom: 1.2rem;
@@ -159,7 +159,7 @@
     font-weight: 700;
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    color: #1c3738;
+    color: #1e293b;
   }
   article.feature p {
     font-size: 1rem;
@@ -168,7 +168,7 @@
 
   /* Testimonials */
   section.testimonials {
-    background: #1c3738;
+    background: #0f3057;
     color: #fffdfa;
     padding: 3.8rem 1rem 4rem;
   }
@@ -188,7 +188,7 @@
   }
   blockquote.testimonial {
     flex: 1 1 320px;
-    background: #182626;
+    background: #1b3a6d;
     border-radius: 14px;
     box-shadow: 0 16px 40px rgb(0 0 0 / 0.25);
     padding: 2rem 2rem 2.4rem;
@@ -220,7 +220,7 @@
     font-weight: 900;
     font-size: 2.6rem;
     margin-bottom: 3rem;
-    color: #1c3738;
+    color: #153243;
   }
   .pricing-plans {
     max-width: 960px;
@@ -243,20 +243,20 @@
   }
   .plan:hover,
   .plan:focus-within {
-    box-shadow: 0 14px 36px #1c3738;
+    box-shadow: 0 14px 36px rgb(43 48 64 / 0.18);
     outline: none;
   }
   .plan h3 {
     font-weight: 900;
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #1c3738;
+    color: #153243;
   }
   .plan-price {
     font-weight: 800;
     font-size: 2.8rem;
     margin-bottom: 0.6rem;
-    color: #8baaad;
+    color: #9f7b53;
   }
   .plan-subtext {
     font-weight: 400;
@@ -275,18 +275,18 @@
     margin-bottom: 1rem;
     font-weight: 600;
     font-size: 1rem;
-    color: #1c3738;
+    color: #374151;
     display: flex;
     align-items: center;
   }
   ul.plan-features li::before {
     content: "✓";
-    color: #8baaad;
+    color: #9f7b53;
     margin-right: 0.7rem;
     font-weight: 700;
   }
   .btn-select-plan {
-    background-color: #8baaad;
+    background-color: #9f7b53;
     border: none;
     color: white;
     padding: 0.75rem 1.6rem;
@@ -300,20 +300,20 @@
   }
   .btn-select-plan:hover,
   .btn-select-plan:focus {
-    background-color: #8baaad;
+    background-color: #a9855b;
     outline: none;
   }
 
   /* Contact Section */
   section.contact {
-    background: white;
+    background: #faf8f5;
     padding: 5rem 1rem 5rem;
   }
   section.contact h2 {
     text-align: center;
     font-weight: 900;
     font-size: 2.6rem;
-    color: #1c3738;
+    color: #153243;
     margin-bottom: 3.2rem;
   }
   .contact-form {
@@ -344,15 +344,15 @@
   .contact-form input:focus,
   .contact-form textarea:focus {
     outline: none;
-    border-color: #8baaad;
-    background-color: white;
+    border-color: #9f7b53;
+    background-color: #fff9e7;
   }
   .contact-form textarea {
     resize: vertical;
     min-height: 110px;
   }
   .btn-submit {
-    background-color: #8baaad;
+    background-color: #9f7b53;
     color: white;
     border: none;
     padding: 0.9rem 1.8rem;
@@ -366,7 +366,7 @@
   }
   .btn-submit:hover,
   .btn-submit:focus {
-    background-color: #8baaad;
+    background-color: #a9855b;
     outline: none;
   }
 
@@ -375,7 +375,7 @@
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background: #8baaad;
+    background: #9f7b53;
     color: white;
     border: none;
     border-radius: 50px;
@@ -389,7 +389,7 @@
   }
   #chat-open-btn:hover,
   #chat-open-btn:focus {
-    background-color: #8baaad;
+    background-color: #a9855b;
     outline: none;
   }
 
@@ -408,7 +408,7 @@
     overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.95rem;
-    color: #182323;
+    color: #2c3e50;
     opacity: 0;
     visibility: hidden;
     transform: translateY(25px);
@@ -421,8 +421,8 @@
     transform: translateY(0);
   }
   #chat-header {
-    background-color: #8baaad;
-    color: #182323;
+    background-color: #9f7b53;
+    color: #f8f4e9;
     padding: 1.2rem 1.6rem;
     font-weight: 700;
     font-size: 1.2rem;
@@ -435,7 +435,7 @@
     background: none;
     border: none;
     font-size: 28px;
-    color: #182323;
+    color: #f8f4e9;
     cursor: pointer;
     line-height: 1;
     padding: 0;
@@ -444,9 +444,9 @@
     flex: 1;
     padding: 1rem 1.4rem;
     overflow-y: auto;
-    background: white;
-    border-top: 1px solid #182323;
-    border-bottom: 1px solid #182323;
+    background: #fffdf7;
+    border-top: 1px solid #eadfbb;
+    border-bottom: 1px solid #eadfbb;
     word-break: break-word;
     display: flex;
     flex-direction: column;
@@ -457,18 +457,18 @@
     max-width: 75%;
     padding: 12px 16px;
     border-radius: 18px;
-    box-shadow: #182323;
+    box-shadow: 0 3px 12px rgba(159,123,83,0.3);
     line-height: 1.4;
   }
   .chat-message.client {
-    background: #182323;
-    color: white;
+    background: #f1ede2;
+    color: #5a4f3b;
     align-self: flex-start;
     border-bottom-left-radius: 4px;
   }
   .chat-message.staff {
-    background: #8baaad;
-    color: #182323;
+    background: #9f7b53;
+    color: #f8f4e9;
     align-self: flex-end;
     border-bottom-right-radius: 4px;
   }
@@ -476,12 +476,12 @@
     display: flex;
     padding: 1rem 1.3rem;
     gap: 12px;
-    background: #8baaad;
+    background: #f7f4e9;
   }
   #chat-input {
     flex: 1;
     border-radius: 40px;
-    border: 1.8px solid #8baaad;
+    border: 1.8px solid #eadfbb;
     padding: 11px 18px;
     font-size: 1rem;
     outline-offset: 2px;
@@ -489,12 +489,12 @@
     transition: border-color 0.3s ease;
   }
   #chat-input:focus {
-    border-color: #182323;
+    border-color: #9f7b53;
   }
   #chat-send-btn {
-    background-color: #8baaad;
+    background-color: #9f7b53;
     border: none;
-    color: #182323;
+    color: #f8f4e9;
     padding: 11px 28px;
     border-radius: 40px;
     font-weight: 700;
@@ -505,7 +505,7 @@
   }
   #chat-send-btn:hover,
   #chat-send-btn:focus {
-    background-color: #8baaad;
+    background-color: #ad8c64;
     outline: none;
   }
 
@@ -513,7 +513,7 @@
   h2.section-title {
     font-weight: 900;
     font-size: 2.75rem;
-    color: #1c3738;
+    color: #153243;
     margin-bottom: 3rem;
     text-align: center;
   }
@@ -522,7 +522,7 @@
     h2.section-title-1 {
     font-weight: 900;
     font-size: 2.75rem;
-    color: white;
+    color: #289adc;
     margin-bottom: 3rem;
     text-align: center;
   }

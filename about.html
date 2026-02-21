@@ -3,740 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Über uns</title>
+  <title>Über uns - Venkshar</title>
   <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet" />
 </head>
-  <style>
-  /* Reset and base */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background: #f4f4f7;
-    color: #2c3e50;
-    scroll-behavior: smooth;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  /* Container */
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  /* Header */
-  header {
-    background: #0f3057;
-    color: #f9f6f0;
-    padding: 1rem 0.75rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 10px rgba(15,48,87,0.5);
-  }
-  header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header .logo {
-    font-weight: 900;
-    font-size: 1.65rem;
-    letter-spacing: 0.08em;
-  }
-  nav {
-    display: flex;
-    gap: 1.75rem;
-  }
-  nav a {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #f9f6f0;
-    padding: 0.375rem 0.75rem;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  nav a:hover,
-  nav a:focus {
-    background-color: #9f7b53;
-    color: #fffdfa;
-    outline: none;
-    box-shadow: 0 0 8px #9f7b53aa;
-  }
-  .btn-contact {
-    background-color: #9f7b53;
-    color: #fffdfa;
-    border: none;
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    transition: background-color 0.3s ease;
-  }
-  .btn-contact:hover,
-  .btn-contact:focus {
-    background-color: #a97f52;
-  }
-
-  /* Hero */
-  section.hero {
-    background: linear-gradient(135deg, #0f3057 0%, #203f7f 100%);
-    color: #f9f6f0;
-    text-align: center;
-    padding: 7rem 1rem 5rem;
-  }
-  section.hero h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  section.hero p {
-    font-size: 1.25rem;
-    line-height: 1.45;
-    max-width: 520px;
-    margin: 0 auto 2.8rem;
-    opacity: 0.85;
-  }
-  section.hero button.btn-primary {
-    background-color: #9f7b53;
-    border: none;
-    color: #fffdfa;
-    font-weight: 700;
-    font-size: 1.15rem;
-    padding: 0.9rem 2rem;
-    border-radius: 30px;
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    transition: background-color 0.3s ease;
-  }
-  section.hero button.btn-primary:hover {
-    background-color: #a97f52;
-  }
-
-  /* Features */
-  section.features {
-    padding: 4rem 0 3rem;
-    background: #faf8f5;
-  }
-  section.features h2 {
-    text-align: center;
-    font-weight: 900;
-    font-size: 2.8rem;
-    margin-bottom: 3.4rem;
-    color: #153243;
-  }
-  .feature-grid {
-    max-width: 960px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.6rem;
-  }
-  article.feature {
-    background: white;
-    padding: 2.5rem 1.8rem;
-    border-radius: 14px;
-    box-shadow: 0 6px 22px rgb(43 48 64 / 0.06);
-    color: #374151;
-    transition: box-shadow 0.3s ease;
-    cursor: default;
-  }
-  article.feature:hover,
-  article.feature:focus-within {
-    box-shadow: 0 15px 38px rgb(43 48 64 / 0.12);
-    outline: none;
-  }
-  article.feature svg {
-    fill: #9f7b53;
-    width: 36px;
-    height: 36px;
-    margin-bottom: 1.2rem;
-  }
-  article.feature h3 {
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #1e293b;
-  }
-  article.feature p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  /* Testimonials */
-  section.testimonials {
-    background: #0f3057;
-    color: #fffdfa;
-    padding: 3.8rem 1rem 4rem;
-  }
-  section.testimonials h2 {
-    text-align: center;
-    font-weight: 900;
-    font-size: 2.4rem;
-    margin-bottom: 2.7rem;
-  }
-  .testimonial-list {
-    max-width: 940px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    justify-content: center;
-  }
-  blockquote.testimonial {
-    flex: 1 1 320px;
-    background: #1b3a6d;
-    border-radius: 14px;
-    box-shadow: 0 16px 40px rgb(0 0 0 / 0.25);
-    padding: 2rem 2rem 2.4rem;
-    font-style: italic;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  blockquote.testimonial p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    margin-bottom: 1.7rem;
-  }
-  blockquote.testimonial cite {
-    font-weight: 700;
-    font-style: normal;
-    align-self: flex-end;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  /* Pricing */
-  section.pricing {
-    padding: 4rem 0 4.5rem;
-  }
-  section.pricing h2 {
-    text-align: center;
-    font-weight: 900;
-    font-size: 2.6rem;
-    margin-bottom: 3rem;
-    color: #153243;
-  }
-  .pricing-plans {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    gap: 2.6rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .plan {
-    background: white;
-    padding: 3rem 2.8rem 3.6rem;
-    border-radius: 18px;
-    box-shadow: 0 6px 22px rgb(43 48 64 / 0.06);
-    flex: 1 1 280px;
-    transition: box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .plan:hover,
-  .plan:focus-within {
-    box-shadow: 0 14px 36px rgb(43 48 64 / 0.18);
-    outline: none;
-  }
-  .plan h3 {
-    font-weight: 900;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #153243;
-  }
-  .plan-price {
-    font-weight: 800;
-    font-size: 2.8rem;
-    margin-bottom: 0.6rem;
-    color: #9f7b53;
-  }
-  .plan-subtext {
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 0.012em;
-    color: #64748b;
-    margin-bottom: 2rem;
-  }
-  ul.plan-features {
-    list-style: none;
-    margin: 0 0 2rem 0;
-    padding: 0;
-    flex-grow: 1;
-  }
-  ul.plan-features li {
-    margin-bottom: 1rem;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #374151;
-    display: flex;
-    align-items: center;
-  }
-  ul.plan-features li::before {
-    content: "✓";
-    color: #9f7b53;
-    margin-right: 0.7rem;
-    font-weight: 700;
-  }
-  .btn-select-plan {
-    background-color: #9f7b53;
-    border: none;
-    color: white;
-    padding: 0.75rem 1.6rem;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    width: 100%;
-    letter-spacing: 0.03em;
-    transition: background-color 0.3s ease;
-  }
-  .btn-select-plan:hover,
-  .btn-select-plan:focus {
-    background-color: #a9855b;
-    outline: none;
-  }
-
-  /* Contact Section */
-  section.contact {
-    background: #faf8f5;
-    padding: 5rem 1rem 5rem;
-  }
-  section.contact h2 {
-    text-align: center;
-    font-weight: 900;
-    font-size: 2.6rem;
-    color: #153243;
-    margin-bottom: 3.2rem;
-  }
-  .contact-form {
-    max-width: 520px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 8px 30px rgb(43 48 64 / 0.12);
-    padding: 3rem 2.8rem;
-  }
-  .contact-form label {
-    display: block;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #374151;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.65rem 1rem;
-    margin-bottom: 1.8rem;
-    border-radius: 12px;
-    border: 1.5px solid #ced4da;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
-  }
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border-color: #9f7b53;
-    background-color: #fff9e7;
-  }
-  .contact-form textarea {
-    resize: vertical;
-    min-height: 110px;
-  }
-  .btn-submit {
-    background-color: #9f7b53;
-    color: white;
-    border: none;
-    padding: 0.9rem 1.8rem;
-    font-weight: 700;
-    font-size: 1.15rem;
-    border-radius: 30px;
-    cursor: pointer;
-    width: 100%;
-    letter-spacing: 0.03em;
-    transition: background-color 0.3s ease;
-  }
-  .btn-submit:hover,
-  .btn-submit:focus {
-    background-color: #a9855b;
-    outline: none;
-  }
-
-  /* Chat button */
-  #chat-open-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #9f7b53;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 16px 26px;
-    font-weight: 700;
-    font-size: 1.15rem;
-    cursor: pointer;
-    box-shadow: 0 8px 26px rgba(159,123,83,0.5);
-    transition: background-color 0.3s ease;
-    z-index: 1200;
-  }
-  #chat-open-btn:hover,
-  #chat-open-btn:focus {
-    background-color: #a9855b;
-    outline: none;
-  }
-
-  /* Chat box */
-  #chat-panel {
-    position: fixed;
-    bottom: 75px;
-    right: 30px;
-    width: 370px;
-    max-height: 520px;
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 12px 38px rgba(0,0,0,0.18);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 0.95rem;
-    color: #2c3e50;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(25px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-    z-index: 1300;
-  }
-  #chat-panel.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  #chat-header {
-    background-color: #9f7b53;
-    color: #f8f4e9;
-    padding: 1.2rem 1.6rem;
-    font-weight: 700;
-    font-size: 1.2rem;
-    user-select: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #chat-close-btn {
-    background: none;
-    border: none;
-    font-size: 28px;
-    color: #f8f4e9;
-    cursor: pointer;
-    line-height: 1;
-    padding: 0;
-  }
-  #chat-messages {
-    flex: 1;
-    padding: 1rem 1.4rem;
-    overflow-y: auto;
-    background: #fffdf7;
-    border-top: 1px solid #eadfbb;
-    border-bottom: 1px solid #eadfbb;
-    word-break: break-word;
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-    font-size: 0.9rem;
-  }
-  .chat-message {
-    max-width: 75%;
-    padding: 12px 16px;
-    border-radius: 18px;
-    box-shadow: 0 3px 12px rgba(159,123,83,0.3);
-    line-height: 1.4;
-  }
-  .chat-message.client {
-    background: #f1ede2;
-    color: #5a4f3b;
-    align-self: flex-start;
-    border-bottom-left-radius: 4px;
-  }
-  .chat-message.staff {
-    background: #9f7b53;
-    color: #f8f4e9;
-    align-self: flex-end;
-    border-bottom-right-radius: 4px;
-  }
-  #chat-input-area {
-    display: flex;
-    padding: 1rem 1.3rem;
-    gap: 12px;
-    background: #f7f4e9;
-  }
-  #chat-input {
-    flex: 1;
-    border-radius: 40px;
-    border: 1.8px solid #eadfbb;
-    padding: 11px 18px;
-    font-size: 1rem;
-    outline-offset: 2px;
-    font-family: inherit;
-    transition: border-color 0.3s ease;
-  }
-  #chat-input:focus {
-    border-color: #9f7b53;
-  }
-  #chat-send-btn {
-    background-color: #9f7b53;
-    border: none;
-    color: #f8f4e9;
-    padding: 11px 28px;
-    border-radius: 40px;
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color 0.3s ease;
-  }
-  #chat-send-btn:hover,
-  #chat-send-btn:focus {
-    background-color: #ad8c64;
-    outline: none;
-  }
-
-  /* Section Titles */
-  h2.section-title {
-    font-weight: 900;
-    font-size: 2.75rem;
-    color: #153243;
-    margin-bottom: 3rem;
-    text-align: center;
-  }
-
-    /* Section Titles */
-    h2.section-title-1 {
-    font-weight: 900;
-    font-size: 2.75rem;
-    color: #289adc;
-    margin-bottom: 3rem;
-    text-align: center;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .feature-grid,
-    .testimonial-list,
-    .pricing-plans {
-      grid-template-columns: 1fr !important;
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-    }
-    #chat-panel {
-      right: 50%;
-      transform: translateX(50%);
-      width: 90vw;
-      max-height: 350px;
-      border-radius: 18px;
-    }
-    header .container {
-      flex-wrap: wrap;
-      gap: 1.2rem;
-    }
-    nav {
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      width: 100%;
-    }
-  }
-</style>
 <body>
   <header role="banner">
     <div class="container">
-      <div class="logo" aria-label="Buchhaltungsfirma Logo">Venkshar Financial AG</div>
+      
+      <a href="index.html" class="logo" aria-label="Zur Startseite">Venkshar Financial AG</a>
+      
       <nav role="navigation" aria-label="Hauptnavigation">
         <a href="index.html#services" tabindex="0">Leistungen</a>
         <a href="index.html#clients" tabindex="0">Kunden</a>
         <a href="index.html#pricing" tabindex="0">Preise</a>
         <a href="index.html#contact" tabindex="0">Kontakt</a>
-        <a href="about.html" tabindex="0">Venkshar</a>
+        <a href="about.html" tabindex="0">VENKSHAR</a>
       </nav>
-      <button class="btn-contact" id="btn-contact" aria-haspopup="dialog" aria-controls="chat-panel" >Kontakt & Chat</button>
+      
+      <button class="btn-contact" id="btn-contact" onclick="window.location.href='index.html#contact'">Kontakt & Chat</button>
     </div>
   </header>
-  <main class="container">
-    <section id="about">
-      <section class="hero" role="region" aria-label="Hero Bereich">
-        <div class="container">
-      <h1>Unsere Mission</h1>
-      <p>
-        Wir sind ein engagiertes Team von Fachleuten, das sich darauf spezialisiert hat, kleinen und mittelständischen Unternehmen bei der Verwaltung ihrer Finanzen zu helfen. Unsere Mission ist es, Ihnen die besten Buchhaltungs- und Beratungsdienstleistungen anzubieten.
-      </p>
+
+  <main>
+    
+    <section class="hero" role="region" aria-label="Hero Bereich" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Venkshar.jpg') center/cover no-repeat; color: white;">
+      <div class="container">
+        <h1>Unsere Mission</h1>
+        <p>
+          Wir sind ein engagiertes Team von Fachleuten, das sich darauf spezialisiert hat, kleinen und mittelständischen Unternehmen bei der Verwaltung ihrer Finanzen zu helfen. Unsere Mission ist es, Ihnen die besten Buchhaltungs- und Beratungsdienstleistungen anzubieten.
+        </p>
         <h3>Noch mehr entdecken</h3>
-        <a href="#Beitrag" tabindex="0"h2>↓</h2></a>
+        <a href="#Beitrag" tabindex="0" style="font-size: 2rem; color: white; text-decoration: none;">↓</a>
+      </div>
     </section>
 
-    <section id="Beitrag" class="features" role="region" aria-labelledby="services-title">
-      <h2 id="services-title" class="section-title">Unser Beitrag</h2>
-      <div class="feature-grid" role="list">
-      <article class="feature" role="listitem" tabindex="0">
-      <p>
-        Bei <strong>Venkshar Financial Services</strong> setzen wir uns dafür ein, Ihnen die finanziellen Werkzeuge und das Wissen zu geben, die Sie benötigen, um erfolgreich zu sein. Transparente und präzise Buchhaltung ist der Schlüssel zu einem gesunden Unternehmen.
-      </p>
-    </div>
+    <section id="Beitrag" class="features" role="region" aria-labelledby="beitrag-title">
+      <div class="container">
+        <h2 id="beitrag-title" class="section-title">Unser Beitrag</h2>
+        <div class="feature-grid" role="list">
+          <article class="feature" role="listitem" tabindex="0">
+            <p>
+              Bei <strong>Venkshar Financial Services</strong> setzen wir uns dafür ein, Ihnen die finanziellen Werkzeuge und das Wissen zu geben, die Sie benötigen, um erfolgreich zu sein. Transparente und präzise Buchhaltung ist der Schlüssel zu einem gesunden Unternehmen.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="clients" class="testimonials" aria-label="Kundenreferenzen">
-        <h2 class="section-title-1">Unsere Geschichte</h2>
+    <section id="geschichte-standort" class="testimonials" aria-label="Unsere Geschichte und Standort">
+      <div class="container">
+        <h2 class="section-title-1">Geschichte & Standort</h2>
+        
+        <div class="testimonial-list">
+          
+          <blockquote class="testimonial" tabindex="0">
+            <div>
+            <h3>Wie alles begann</h3>
+            <p>Venkshar wurde im Jahr <strong>[Gründungsjahr]</strong> gegründet, um KMUs eine zuverlässige Buchhaltungsdienstleistung anzubieten. Wir entwickeln uns stetig weiter, um Ihre Bedürfnisse zu erfüllen und modernste Lösungen anzubieten.</p>
+          </div>
+          </blockquote>
+
+          <blockquote class="testimonial" tabindex="0">
+            <div id="standort">
+              <h3>Unser Büro in Möhlin</h3>
+                <div>
+                  <p>
+                    Besuchen Sie uns an unserem Hauptsitz. Wir freuen uns auf ein persönliches Gespräch.<br><br>
+                    <strong>Venkshar Financial AG</strong><br>
+                    Ringwegstrasse 20<br>
+                    4313 Möhlin
+                  </p>
+                </div>
+                
+                <div style="border-radius: 10px; overflow: hidden; line-height: 0;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1265.113112989491!2d7.840392717066455!3d47.57192002687518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47904b59141c5741%3A0x9b13da11afa565a0!2sRingweg%2020%2C%204313%20M%C3%B6hlin!5e0!3m2!1sde!2sch!4v1771673843447!5m2!1sde!2sch" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="werte" class="features" role="region" aria-labelledby="werte-title">
+      <div class="container">
+        <h2 id="werte-title" class="section-title">Unsere Werte</h2>
+        <div class="feature-grid" role="list">
+          <article class="feature" role="listitem" tabindex="0">
+            <h3>Integrität</h3>
+            <p>Wir handeln stets ehrlich und transparent.</p>
+          </article>
+          <article class="feature" role="listitem" tabindex="0">
+            <h3>Exzellenz</h3>
+            <p>Wir streben nach höchster Qualität.</p>
+          </article>
+          <article class="feature" role="listitem" tabindex="0">
+            <h3>Innovation</h3>
+            <p>Moderne Technologien verbessern unsere Leistung.</p>
+          </article>
+          <article class="feature" role="listitem" tabindex="0">
+            <h3>Kundenorientierung</h3>
+            <p>Ihre Zufriedenheit steht im Mittelpunkt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="testimonials" aria-label="Unser Team">
+      <div class="container">
+        <h2 class="section-title-1">Unser Team</h2>
         <div class="testimonial-list">
           <blockquote class="testimonial" tabindex="0">
-      <p>
-        Venkshar wurde im Jahr <strong>[Gründungsjahr]</strong> gegründet, um KMUs eine zuverlässige Buchhaltungsdienstleistung anzubieten. Wir entwickeln uns stetig weiter, um Ihre Bedürfnisse zu erfüllen.
-      </p>
+            <div class="team-member">
+              <h3>[Name, Position]</h3>
+              <p>[Kurze Beschreibung der Person, ihrer Qualifikationen und Erfahrungen]</p>
+            </div>
+          </blockquote>
+          <blockquote class="testimonial" tabindex="0">
+            <div class="team-member">
+              <h3>[Name, Position]</h3>
+              <p>[Kurze Beschreibung der Person, ihrer Qualifikationen und Erfahrungen]</p>
+            </div>
+          </blockquote>
+          <blockquote class="testimonial" tabindex="0">
+            <div class="team-member">
+              <h3>[Name, Position]</h3>
+              <p>[Kurze Beschreibung der Person, ihrer Qualifikationen und Erfahrungen]</p>
+            </div>
+          </blockquote>
+        </div>
+      </div>
     </section>
 
-      <section id="services" class="features" role="region" aria-labelledby="services-title">
-        <h2 id="services-title" class="section-title">Unsere Werte</h2>
+    <section id="warum" class="features" role="region" aria-labelledby="warum-title">
+      <div class="container">
+        <h2 id="warum-title" class="section-title">Warum Venkshar Financial Services?</h2>
         <div class="feature-grid" role="list">
-        <article class="feature" role="listitem" tabindex="0">
-          <h3>Integrität</h3>
-          <p>Wir handeln stets ehrlich und transparent.</p>
-        </article>
-        <article class="feature" role="listitem" tabindex="0">
-          <h3>Exzellenz</h3>
-          <p>Wir streben nach höchster Qualität.</p>
-        </article>
-        <article class="feature" role="listitem" tabindex="0">
-          <h3>Innovation</h3>
-          <p>Moderne Technologien verbessern unsere Leistung.</p>
-        </article>
-        <article class="feature" role="listitem" tabindex="0">
-          <h3>Kundenorientierung</h3>
-          <p>Ihre Zufriedenheit steht im Mittelpunkt.</p>
-        </article>
-    </section>
-
-    
-    <section id="clients" class="testimonials" aria-label="Kundenreferenzen">
-      <h2 class="section-title-1">Unser Team</h2>
-      <div class="testimonial-list">
-            <blockquote class="testimonial" tabindex="0">
-      <div class="team-member">
-        <h3>[Name, Position]</h3>
-        <p>[Kurze Beschreibung der Person, ihrer Qualifikationen und Erfahrungen]</p>
-      </div>
-      <div class="team-member">
-        <h3>[Name, Position]</h3>
-        <p>[Kurze Beschreibung der Person, ihrer Qualifikationen und Erfahrungen]</p>
-      </div>
-      <div class="team-member">
-        <h3>[Name, Position]</h3>
-        <p>[Kurze Beschreibung der Person, ihrer Qualifikationen und Erfahrungen]</p>
+          <article class="feature" role="listitem" tabindex="0">
+            <h3>Erfahrung</h3>
+            <p>Über 20 Jahre Erfahrung in der Branche.</p>
+          </article>
+          <article class="feature" role="listitem" tabindex="0">
+            <h3>Kundenzufriedenheit</h3>
+            <p>Unsere Kunden stehen im Mittelpunkt.</p>
+          </article>
+          <article class="feature" role="listitem" tabindex="0">
+            <h3>Transparenz</h3>
+            <p>Faire Preisgestaltung, offene Kommunikation.</p>
+          </article>
+          <article class="feature" role="listitem" tabindex="0">
+            <h3>Technologie</h3>
+            <p>Moderne Softwarelösungen.</p>
+          </article>
+        </div>
       </div>
     </section>
-
-    <section id="services" class="features" role="region" aria-labelledby="services-title">
-      <h2 id="services-title" class="section-title">Warum Venkshar Financial Services?</h2>
-      <div class="feature-grid" role="list">
-      <article class="feature" role="listitem" tabindex="0">
-        <h3>Erfahrung</h3>
-        <p> Über 20 Jahre Erfahrung in der Branche.</p>
-      </article>
-      <article class="feature" role="listitem" tabindex="0">
-        <h3>Kundenzufriedenheit</h3>
-        <p> Unsere Kunden stehen im Mittelpunkt.</p>
-      </article>
-      <article class="feature" role="listitem" tabindex="0">
-        <h3>Transparenz</h3>
-        <p> Faire Preisgestaltung, offene Kommunikation.</p>
-      </article>
-      <article class="feature" role="listitem" tabindex="0">
-        <h3>Technologie</h3>
-        <p> Moderne Softwarelösungen.</p>
-      </article>
-  </section>
-
-  <section id="services" class="features" role="region" aria-labelledby="services-title">
-    <h2 id="services-title" class="section-title">Standort</h2>
-    <div class="feature-grid" role="list">
-    <article class="feature" role="listitem" tabindex="0">
-  <p id="locationDescription">Wir haben denn Sitz in Möhlin Ringwegstrasse 20.</p>
-  <section id="map">
-    <article class="feature" role="listitem" tabindex="0">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.811094125933!2d7.837808976225125!3d47.571463790403406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47904b59141c5741%3A0x9b13da11afa565a0!2sRingweg%2020%2C%204313%20M%C3%B6hlin!5e0!3m2!1sde!2sch!4v1740870358270!5m2!1sde!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-  </section>
 
     <section class="testimonials">
-      <h2 class="section-title-1">Kundenreferenzen</h2>
-      <div class="testimonial-list">
-        <blockquote class="testimonial">
-          <p>"Venkshar hat uns geholfen, unsere Buchhaltung zu optimieren und Zeit zu sparen. Wir können Venkshar nur empfehlen!"</p>
-          <cite>- Anonym</cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p>"Die Zusammenarbeit mit Venkshar war eine der besten Entscheidungen für unser Unternehmen. Ihre Expertise ist unschätzbar."</p>
-          <cite>- Anonym</cite>
-        </blockquote>
+      <div class="container">
+        <h2>Kundenreferenzen</h2>
+        <div class="testimonial-list">
+          <blockquote class="testimonial">
+            <p>"Venkshar hat uns geholfen, unsere Buchhaltung zu optimieren und Zeit zu sparen. Wir können Venkshar nur empfehlen!"</p>
+            <cite>- Anonym</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"Die Zusammenarbeit mit Venkshar war eine der besten Entscheidungen für unser Unternehmen. Ihre Expertise ist unschätzbar."</p>
+            <cite>- Anonym</cite>
+          </blockquote>
+        </div>
       </div>
     </section>
 
-    <section id="services" class="features" role="region" aria-labelledby="services-title">
-      <h2 id="services-title" class="section-title">Häufig gestellte Fragen (FAQ)</h2>
-      <div class="feature-grid" role="list">
-      <article class="feature" role="listitem" tabindex="0">
-      <div class="faq-item">
-        <h3>Wie lange dauert es, bis ich eine Antwort auf meine Anfrage erhalte?</h3>
-        <p>Wir bemühen uns, alle Anfragen innerhalb von 24 Stunden zu beantworten.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Welche Unterlagen benötige ich für die Buchhaltung?</h3>
-        <p>Belege, Kontoauszüge und relevante Dokumente werden benötigt.</p>
-      </div>
-      <div class="faq-item">
-        <h3>Bieten Sie auch Online-Dienstleistungen an?</h3>
-        <p>Ja, wir bieten viele Online-Services für maximale Flexibilität.</p>
+    <section id="faq" class="features" role="region" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title" class="section-title">Häufig gestellte Fragen (FAQ)</h2>
+        <div class="feature-grid" role="list">
+          <article class="feature" role="listitem" tabindex="0">
+            <div class="faq-item">
+              <h3>Wie lange dauert es, bis ich eine Antwort auf meine Anfrage erhalte?</h3>
+              <p>Wir bemühen uns, alle Anfragen innerhalb von 24 Stunden zu beantworten.</p>
+            </div>
+          </article>
+          <article class="feature" role="listitem" tabindex="0">
+            <div class="faq-item">
+              <h3>Welche Unterlagen benötige ich für die Buchhaltung?</h3>
+              <p>Belege, Kontoauszüge und relevante Dokumente werden benötigt.</p>
+            </div>
+          </article>
+          <article class="feature" role="listitem" tabindex="0">
+            <div class="faq-item">
+              <h3>Bieten Sie auch Online-Dienstleistungen an?</h3>
+              <p>Ja, wir bieten viele Online-Services für maximale Flexibilität.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
+
   </main>
 
   <button id="chat-open-btn" aria-haspopup="dialog" aria-controls="chat-panel" aria-label="Chat mit Buchhaltungsfirma öffnen">Chat starten</button>
 
-<div id="chat-panel" role="dialog" aria-modal="true" aria-labelledby="chat-header" aria-hidden="true" hidden>
-  <div id="chat-header">
-    Buchhaltungs Chat
-    <button id="chat-close-btn" aria-label="Chat schliessen">&times;</button>
-  </div>
-  <div id="chat-messages" tabindex="0" aria-live="polite" aria-relevant="additions"></div>
-  <form id="chat-form" aria-label="Chat Nachricht senden" novalidate>
-    <div id="chat-input-area">
-      <input id="chat-input" type="text" placeholder="Schreiben Sie eine Nachricht..." autocomplete="off" aria-label="Nachricht eingeben" required />
-      <button type="submit" id="chat-send-btn" aria-label="Nachricht senden">Senden</button>
+  <div id="chat-panel" role="dialog" aria-modal="true" aria-labelledby="chat-header" aria-hidden="true" hidden>
+    <div id="chat-header">
+      Buchhaltungs Chat
+      <button id="chat-close-btn" aria-label="Chat schliessen">×</button>
     </div>
-  </form>
-</div>
+    <div id="chat-messages" tabindex="0" aria-live="polite" aria-relevant="additions"></div>
+    <form id="chat-form" aria-label="Chat Nachricht senden" novalidate>
+      <div id="chat-input-area">
+        <input id="chat-input" type="text" placeholder="Schreiben Sie eine Nachricht..." autocomplete="off" aria-label="Nachricht eingeben" required />
+        <button type="submit" id="chat-send-btn" aria-label="Nachricht senden">Senden</button>
+      </div>
+    </form>
+  </div>
 
-  <footer role="contentinfo" class="container" style="text-align:center; padding:1.6rem 0; font-size:0.9rem; color:#6b7280;">
-       &copy; 2025 Venkshar Financial AG. Alle Rechte vorbehalten.
+  <footer role="contentinfo" class="container" style="text-align:center; padding:2rem 0; font-size:0.9rem; color:#6b7280; width: 100%;">
+       © 2025 Venkshar Financial AG. Alle Rechte vorbehalten.
   </footer>
 
-  <script src="script.js"></script>
   <script>
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -800,22 +288,6 @@
         appendMessage(reply, 'staff');
       }, 1500);
     }
-  
-    // Contact form validation and submission (mock)
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = contactForm.name.value.trim();
-      const email = contactForm.email.value.trim();
-      const message = contactForm.message.value.trim();
-      if(!name || !email || !message){
-        alert('Bitte alle Felder ausfüllen.');
-        return;
-      }
-      // Mock submission
-      alert(`Danke, ${name}. Ihre Nachricht wurde gesendet.`);
-      contactForm.reset();
-    });
   </script>
 </body>
 </html>
