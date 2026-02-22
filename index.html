@@ -10,288 +10,321 @@
 <body>
   <header role="banner">
     <div class="container">
+      <a href="index.html" class="logo" aria-label="Zur Startseite">Venkshar</a>
       
-      <a href="index.html" class="logo" aria-label="Zur Startseite">Venkshar Financial AG</a>
-      
-      <nav role="navigation" aria-label="Hauptnavigation">
-        <a href="index.html#services" tabindex="0">Leistungen</a>
-        <a href="index.html#clients" tabindex="0">Kunden</a>
-        <a href="index.html#pricing" tabindex="0">Preise</a>
-        <a href="index.html#contact" tabindex="0">Kontakt</a>
-        <a href="about.html" tabindex="0">VENKSHAR</a>
+      <div class="hamburger" id="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <nav role="navigation" id="nav-links">
+        <a href="#services">Leistungen</a>
+        <a href="#clients">Kunden</a>
+        <a href="#pricing">Preise</a>
+        <a href="about.html">Über uns</a>
       </nav>
       
-      <button class="btn-contact" id="btn-contact" onclick="window.location.href='index.html#contact'">Kontakt & Chat</button>
+      <button class="btn-contact" onclick="window.location.href='#contact'">Kontakt & Chat</button>
     </div>
   </header>
 
-  <section class="hero" role="region" aria-label="Hero Bereich" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Partner.jpg') center/cover no-repeat; color: white;">
-  <div class="container">
-    <h1>Ihr vertrauenswürdiger Partner für Buchhaltung & Beratung</h1>
-    <p>Effiziente, digitale Buchhaltungslösungen für Unternehmen jeder Grösse. Persönlich, professionell und transparent.</p>
-    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Kostenlose Beratung anfragen</button>
-  </div>
-</section>
-
-<section id="services" class="features" role="region" aria-labelledby="services-title">
-  <h2 id="services-title" class="section-title">Unsere Leistungen</h2>
-  <div class="feature-grid" role="list">
-    <article class="feature" role="listitem" tabindex="0">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM10 17h4v-2h-4v2zm7-7h-4v5h2v-3h2v-2h0zm-8.114 3.904 1.554-4.352 1.236.582-.873 1.555c.256-.061.51-.11.783-.095h.004v.004c.462.022.983.144 1.43.408a1 1 0 01.11 1.67l-4.143 3.208z"/></svg>
-      <h3>Digitale Buchhaltung</h3>
-      <p>Sämtliche Buchungen werden digital und automatisiert erfasst, inkl. Belegmanagement.</p>
-    </article>
-    <article class="feature" role="listitem" tabindex="0">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 10h-4V0H9v10H5l7 7 7-7zM7.75 14.5c.97 0 1.75.78 1.75 1.75s-.78 1.75-1.75 1.75S6 17.22 6 16.25s.78-1.75 1.75-1.75z"/></svg>
-      <h3>Lohnbuchhaltung</h3>
-      <p>Reibungslose Lohnabrechnung und Sozialversicherung – rechtssicher und pünktlich.</p>
-    </article>
-    <article class="feature" role="listitem" tabindex="0">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 10h-2V7H5v6h2v4H3v-6c0-1.1.9-2 2-2h12v2h2v-3z"/></svg>
-      <h3>Mehrwertsteuer & Steuerberatung</h3>
-      <p>Optimale Steuerstrategie dank professioneller Beratung für Ihr Unternehmen.</p>
-    </article>
-    <article class="feature" role="listitem" tabindex="0">
-      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.27 3.9 9.55 9 10 5.1-.45 9-4.73 9-10V5l-9-4z"/></svg>
-      <h3>Individuelle Beratung</h3>
-      <p>Persönliche Beratung als vertrauensvoller Partner für Ihre Finanzstrategie.</p>
-    </article>
-  </div>
-</section>
-
-<section id="clients" class="testimonials" aria-label="Kundenreferenzen">
-  <h2 class="section-title-1">Unsere zufriedenen Kunden</h2>
-  <div class="testimonial-list">
-    <blockquote class="testimonial" tabindex="0">
-      <p>Die Zusammenarbeit ist professionell und unkompliziert. Unsere Buchhaltung ist nun stressfrei und transparent.</p>
-      <cite>– Firma Müller AG</cite>
-    </blockquote>
-    <blockquote class="testimonial" tabindex="0">
-      <p>Kompetente Beratung und schnelle Reaktionszeiten. Das Team fühlt sich tatsächlich als Partner und nicht nur Dienstleister an.</p>
-      <cite>– Schmidt & Sohn GmbH</cite>
-    </blockquote>
-    <blockquote class="testimonial" tabindex="0">
-      <p>Die Digitalisierung unserer Buchhaltungsprozesse hat uns enorm entlastet und wertvolle Zeit gespart.</p>
-      <cite>– Tech Solutions AG</cite>
-    </blockquote>
-  </div>
-</section>
-
-<section id="pricing" class="pricing" aria-label="Preise und Pakete">
-  <h2 class="section-title">Preisübersicht</h2>
-  <div class="pricing-plans">
-    <div class="plan" tabindex="0" aria-label="Basis Paket">
-      <h3>Basis</h3>
-      <p class="plan-price">CHF 250<span style="font-size: 1rem;">/Monat</span></p>
-      <p class="plan-subtext">Für kleine Unternehmen</p>
-      <ul class="plan-features">
-        <li>Digitale Buchhaltung</li>
-        <li>Lohnabrechnung für bis zu 5 Mitarbeiter</li>
-        <li>Monatliche Auswertung</li>
-      </ul>
-      <button class="btn-select-plan">Jetzt auswählen</button>
+  <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Partner.jpg');">
+    <div class="container fade-in">
+      <h1>Ihr vertrauenswürdiger Partner für Finanzen</h1>
+      <p>Effiziente, digitale Buchhaltungslösungen für Unternehmen. Persönlich, professionell und transparent.</p>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Jetzt durchstarten</button>
     </div>
-    <div class="plan" tabindex="0" aria-label="Standard Paket">
-      <h3>Standard</h3>
-      <p class="plan-price">CHF 480<span style="font-size: 1rem;">/Monat</span></p>
-      <p class="plan-subtext">Für mittelgrosse Unternehmen</p>
-      <ul class="plan-features">
-        <li>Alles aus Basis Paket</li>
-        <li>Lohnabrechnung für bis zu 20 Mitarbeiter</li>
-        <li>Individuelle Steuerberatung</li>
-      </ul>
-      <button class="btn-select-plan">Jetzt auswählen</button>
+  </section>
+
+  <section id="services" class="features fade-in">
+    <div class="container">
+      <h2 class="section-title">Unsere Leistungen</h2>
+      <div class="feature-grid">
+        <article class="feature">
+          <h3>Digitale Buchhaltung</h3>
+          <p>Sämtliche Buchungen werden digital und automatisiert erfasst, inkl. Belegmanagement.</p>
+        </article>
+        <article class="feature">
+          <h3>Lohnbuchhaltung</h3>
+          <p>Reibungslose Lohnabrechnung und Sozialversicherung – rechtssicher und pünktlich.</p>
+        </article>
+        <article class="feature">
+          <h3>Mehrwertsteuer & Beratung</h3>
+          <p>Optimale Steuerstrategie dank professioneller Beratung für Ihr Unternehmen.</p>
+        </article>
+      </div>
     </div>
-    <div class="plan" tabindex="0" aria-label="Premium Paket">
-      <h3>Premium</h3>
-      <p class="plan-price">Auf Anfrage</p>
-      <p class="plan-subtext">Für grosse Unternehmen und Konzerne</p>
-      <ul class="plan-features">
-        <li>Alle Leistungen Standard Paket</li>
-        <li>Persönlicher Berater</li>
-        <li>Individuelle Finanzplanung & Consulting</li>
-      </ul>
-      <button class="btn-select-plan">Kontakt aufnehmen</button>
+  </section>
+
+  <section id="clients" class="testimonials fade-in">
+    <div class="container">
+      <h2 class="section-title-1">Unsere zufriedenen Kunden</h2>
+      <div class="testimonial-list">
+        <blockquote class="testimonial">
+          <p>"Die Zusammenarbeit ist absolut fantastisch. Unsere Buchhaltung ist nun stressfrei."</p>
+          <cite>– Firma Müller AG</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Schnell, kompetent und komplett digitalisiert. Wir haben extrem viel Zeit gespart!"</p>
+          <cite>– Tech Solutions AG</cite>
+        </blockquote>
+      </div>
     </div>
+  </section>
+
+  <section id="pricing" class="pricing fade-in">
+    <div class="container">
+      <h2 class="section-title">Transparente Preise</h2>
+      <div class="pricing-plans">
+        <div class="plan">
+          <h3>Basis</h3>
+          <p style="font-size: 2.5rem; font-weight: 900; color: #8baaad;">CHF 250<span style="font-size: 1rem; color: #666;">/mtl.</span></p>
+          <p>Digitale Buchhaltung & Lohn für 5 Mitarbeiter.</p>
+          <button class="btn-select-plan" style="margin-top: 20px;">Auswählen</button>
+        </div>
+        <div class="plan">
+          <h3>Premium</h3>
+          <p style="font-size: 2.5rem; font-weight: 900; color: #8baaad;">Auf Anfrage</p>
+          <p>Persönlicher Berater & individuelle Finanzplanung.</p>
+          <button class="btn-select-plan" style="margin-top: 20px;">Kontaktieren</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact fade-in" style="background: white; padding: 5rem 0;">
+    <div class="container">
+      <h2 class="section-title">Kontaktieren Sie uns</h2>
+      <form class="contact-form" id="contact-form" novalidate>
+        <label for="name">Ihr Name</label>
+        <input type="text" id="name" name="name" required placeholder="Thirunathan Kanagaratnam" />
+        
+        <label for="email">Ihre E-Mail</label>
+        <input type="email" id="email" name="email" required placeholder="tkanagaratnam@venkshar.com" />
+        
+        <label for="message">Ihre Nachricht</label>
+        <textarea id="message" name="message" required placeholder="Wie können wir Ihnen helfen?" rows="3"></textarea>
+        
+        <label>Datei anhängen (optional)</label>
+        <div class="custom-file-upload">
+          <input type="file" id="theFile" name="theFile" accept="*/*" />
+          <label for="theFile" class="file-btn">
+            📎 Dokument auswählen
+          </label>
+          <span id="file-name-display">Keine Datei ausgewählt</span>
+        </div>
+        
+        <button type="submit" class="btn-submit">Nachricht sicher senden</button>
+      </form>
+    </div>
+  </section>
+
+  <button id="chat-open-btn">Live Chat</button>
+  <div id="chat-panel">
+    <div id="chat-header">
+      Kundenberatung
+      <button id="chat-close-btn" aria-label="Schliessen">×</button>
+    </div>
+    <div id="chat-messages">
+      <div class="chat-message staff">Hallo! Haben Sie Fragen oder Dokumente für uns? Hinterlassen Sie uns Ihre Nachricht und E-Mail.</div>
+    </div>
+    <form id="chat-form">
+      <input id="chat-email" type="email" placeholder="Ihre E-Mail-Adresse für die Antwort..." required />
+      
+      <div id="chat-file-name-preview"></div>
+      
+      <div id="chat-input-area">
+        <label for="chat-file" id="chat-file-label" title="Datei anhängen">📎</label>
+        <input type="file" id="chat-file" style="display: none;" />
+        
+        <input id="chat-input" type="text" placeholder="Ihre Nachricht..." required />
+        <button type="submit" id="chat-send-btn">Senden</button>
+      </div>
+    </form>
   </div>
-</section>
 
-<section id="contact" class="contact" aria-label="Kontaktformular">
-  <h2 class="section-title">Kontaktieren Sie uns</h2>
-  <form class="contact-form" id="contact-form" novalidate>
-    <label for="name">Ihr Name</label>
-    <input type="text" id="name" name="name" required placeholder="Thirunathan Kanagaratnam" />
-    
-    <label for="email">Ihre E-Mail</label>
-    <input type="email" id="email" name="email" required placeholder="tkanagaratnam@venkshar.com" />
-    
-    <label for="message">Ihre Nachricht</label>
-    <textarea id="message" name="message" required placeholder="Wie können wir Ihnen helfen?"></textarea>
-    
-    <label for="theFile">Datei anhängen (optional, max. ~30MB)</label>
-    <input type="file" id="theFile" name="theFile" accept="*/*" />
-    <br><br>
+  <footer style="text-align:center; padding:2rem; color:#666; background: #f4f4f7;">
+    © 2026 Venkshar Financial AG. Alle Rechte vorbehalten.
+  </footer>
 
-    <button type="submit" class="btn-submit">Nachricht senden</button>
-  </form>
-</section>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbw_ld7ebLB9MDrgZOLZarShxAah-BzChvijv4OZlN0SP1NyaY4spc3JYaC0_JJhwvCV/exec";
 
-
-
-<button id="chat-open-btn" aria-haspopup="dialog" aria-controls="chat-panel" aria-label="Chat mit Buchhaltungsfirma öffnen">Chat starten</button>
-
-<div id="chat-panel" role="dialog" aria-modal="true" aria-labelledby="chat-header" aria-hidden="true" hidden>
-  <div id="chat-header">
-    Buchhaltungs Chat
-    <button id="chat-close-btn" aria-label="Chat schliessen">&times;</button>
-  </div>
-  <div id="chat-messages" tabindex="0" aria-live="polite" aria-relevant="additions"></div>
-  <form id="chat-form" aria-label="Chat Nachricht senden" novalidate>
-    <div id="chat-input-area">
-      <input id="chat-input" type="text" placeholder="Schreiben Sie eine Nachricht..." autocomplete="off" aria-label="Nachricht eingeben" required />
-      <button type="submit" id="chat-send-btn" aria-label="Nachricht senden">Senden</button>
-    </div>
-  </form>
-</div>
-
-<footer role="contentinfo" class="container" style="text-align:center; padding:1.6rem 0; font-size:0.9rem; color:#6b7280;">
-  &copy; 2025 Venkshar Financial AG. Alle Rechte vorbehalten.
-</footer>
-
-<script>
-  const contactForm = document.getElementById("contact-form");
-  const submitBtn = contactForm.querySelector(".btn-submit");
-  const fileInput = document.getElementById("theFile");
-
-  // WICHTIG: Ersetze dies mit deiner Google Apps Script Web-App URL!
-  const scriptURL = "https://script.google.com/macros/s/AKfycbw_ld7ebLB9MDrgZOLZarShxAah-BzChvijv4OZlN0SP1NyaY4spc3JYaC0_JJhwvCV/exec";
-
-  // Hilfsfunktion: Wandelt die Datei in einen Base64-String um
-  async function getBase64(file) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const data = e.target.result.split(",");
-        resolve({
-          fileName: file.name,
-          mimeType: data[0].match(/:(\w.+);/)[1],
-          data: data[1], // Der eigentliche Datei-Inhalt
-        });
-      };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  }
-
-  contactForm.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const originalBtnText = submitBtn.textContent;
-    submitBtn.textContent = "Wird gesendet...";
-    submitBtn.disabled = true;
-
-    try {
-      // 1. Text-Daten aus dem Formular sammeln
-      const formDataObj = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-      };
-
-      // 2. Prüfen, ob eine Datei ausgewählt wurde, und umwandeln
-      if (fileInput.files.length > 0) {
-        formDataObj.fileData = await getBase64(fileInput.files[0]);
-      }
-
-      // 3. Alles an Google senden
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(formDataObj),
-        headers: { "Content-Type": "text/plain;charset=utf-8" },
+    async function getBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const data = e.target.result.split(",");
+          resolve({ fileName: file.name, mimeType: data[0].match(/:(\w.+);/)[1], data: data[1] });
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
       });
-
-      const data = await response.json();
-
-      if (data.status === "success") {
-        alert("Vielen Dank! Ihre Nachricht (und Datei) wurde erfolgreich gesendet.");
-        contactForm.reset();
-      } else {
-        throw new Error(data.message);
-      }
-    } catch (error) {
-      console.error("Fehler:", error);
-      alert("Fehler beim Senden. Bitte versuchen Sie es später erneut.");
-    } finally {
-      submitBtn.textContent = originalBtnText;
-      submitBtn.disabled = false;
     }
-  });
-</script>
 
-<script>
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if(target){
-        target.scrollIntoView({ behavior: 'smooth' });
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      hamburger.classList.toggle('toggle');
+    });
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => { navLinks.classList.remove('nav-active'); hamburger.classList.remove('toggle'); });
+    });
+
+    // Ruhigere Scroll-Animation Auslösung
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.1, rootMargin: "0px" });
+    faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // Formular Logik
+    const fileInput = document.getElementById("theFile");
+    const fileNameDisplay = document.getElementById("file-name-display");
+
+    fileInput.addEventListener('change', function() {
+      if (this.files && this.files.length > 0) {
+        fileNameDisplay.textContent = this.files[0].name;
+        fileNameDisplay.style.color = "#1c3738";
+        fileNameDisplay.style.fontWeight = "bold";
+      } else {
+        fileNameDisplay.textContent = "Keine Datei ausgewählt";
+        fileNameDisplay.style.color = "#64748b";
+        fileNameDisplay.style.fontWeight = "normal";
       }
     });
-  });
 
-  // Chat panel logic
-  const chatOpenBtn = document.getElementById('chat-open-btn');
-  const chatPanel = document.getElementById('chat-panel');
-  const chatCloseBtn = document.getElementById('chat-close-btn');
-  const chatForm = document.getElementById('chat-form');
-  const chatInput = document.getElementById('chat-input');
-  const chatMessages = document.getElementById('chat-messages');
+    const contactForm = document.getElementById("contact-form");
+    const submitBtn = contactForm.querySelector(".btn-submit");
 
-  chatOpenBtn.addEventListener('click', () => {
-    chatPanel.hidden = false;
-    chatPanel.setAttribute('aria-hidden', 'false');
-    chatPanel.classList.add('visible');
-    chatInput.focus();
-  });
+    contactForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = "Nachricht wird gesendet...";
+      submitBtn.disabled = true;
 
-  chatCloseBtn.addEventListener('click', () => {
-    chatPanel.classList.remove('visible');
-    chatPanel.setAttribute('aria-hidden', 'true');
-    setTimeout(() => chatPanel.hidden = true, 300);
-    chatOpenBtn.focus();
-  });
+      try {
+        const formDataObj = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value
+        };
+        if (fileInput.files.length > 0) formDataObj.fileData = await getBase64(fileInput.files[0]);
 
-  chatForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const msg = chatInput.value.trim();
-    if (!msg) return;
-    appendMessage(msg, 'client');
-    chatInput.value = '';
-    replyFromStaff(msg);
-  });
+        const response = await fetch(scriptURL, { method: "POST", body: JSON.stringify(formDataObj), headers: { "Content-Type": "text/plain;charset=utf-8" } });
+        const data = await response.json();
+        if (data.status === "success") {
+          alert("Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.");
+          contactForm.reset();
+          fileNameDisplay.textContent = "Keine Datei ausgewählt";
+          fileNameDisplay.style.fontWeight = "normal";
+        } else throw new Error(data.message);
+      } catch (error) {
+        alert("Fehler beim Senden. Bitte versuchen Sie es später erneut.");
+      } finally {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+      }
+    });
 
-  function appendMessage(text, sender) {
-    const msgDiv = document.createElement('div');
-    msgDiv.classList.add('chat-message', sender === 'client' ? 'client' : 'staff');
-    msgDiv.textContent = text;
-    chatMessages.appendChild(msgDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }
+    // Chat Logik
+    const chatBtn = document.getElementById('chat-open-btn');
+    const chatPanel = document.getElementById('chat-panel');
+    const chatClose = document.getElementById('chat-close-btn');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatEmailInput = document.getElementById('chat-email');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatFileInput = document.getElementById('chat-file');
+    const chatFileNamePreview = document.getElementById('chat-file-name-preview');
+    const chatSendBtn = document.getElementById('chat-send-btn');
 
-  function replyFromStaff(userMsg) {
-    setTimeout(() => {
-      const replies = [
-        "Vielen Dank für Ihre Nachricht. Wie können wir Ihnen helfen?",
-        "Wir kümmern uns schnellstmöglich um Ihr Anliegen.",
-        "Ein Mitarbeiter wird sich umgehend bei Ihnen melden.",
-        "Können Sie uns bitte weitere Details mitteilen?"
-      ];
-      const reply = replies[Math.floor(Math.random() * replies.length)];
-      appendMessage(reply, 'staff');
-    }, 1500);
-  }
-</script>
+    chatBtn.addEventListener('click', () => { chatPanel.classList.add('visible'); chatInput.focus(); });
+    chatClose.addEventListener('click', () => chatPanel.classList.remove('visible'));
 
+    chatFileInput.addEventListener('change', function() {
+      if (this.files && this.files.length > 0) {
+        chatFileNamePreview.textContent = "Anhang bereit: " + this.files[0].name;
+      } else {
+        chatFileNamePreview.textContent = "";
+      }
+    });
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const msg = chatInput.value.trim();
+      const email = chatEmailInput.value.trim();
+      
+      if (!msg || (chatEmailInput.style.display !== 'none' && !email)) return;
+      
+      const attachedFileName = chatFileInput.files.length > 0 ? chatFileInput.files[0].name : null;
+      appendMessage(msg, 'client', attachedFileName);
+      
+      const originalChatBtnText = chatSendBtn.textContent;
+      chatSendBtn.textContent = "...";
+      chatSendBtn.disabled = true;
+      chatInput.value = '';
+      chatFileNamePreview.textContent = ""; 
+
+      try {
+        const chatDataObj = { name: "Über Live-Chat", email: email, message: msg };
+        if (chatFileInput.files.length > 0) {
+          chatDataObj.fileData = await getBase64(chatFileInput.files[0]);
+        }
+
+        showTypingIndicator(); 
+        
+        const response = await fetch(scriptURL, { method: "POST", body: JSON.stringify(chatDataObj), headers: { "Content-Type": "text/plain;charset=utf-8" } });
+        const data = await response.json();
+        removeTypingIndicator();
+
+        if (data.status === "success") {
+          appendMessage("Nachricht und Anhang wurden sicher empfangen! Wir melden uns per E-Mail.", 'staff');
+          chatFileInput.value = ""; 
+          
+          chatEmailInput.style.display = "none";
+          chatEmailInput.required = false; 
+        } else throw new Error(data.message);
+      } catch (error) {
+        removeTypingIndicator();
+        appendMessage("Fehler beim Senden. Bitte nutzen Sie das Formular auf der Seite.", 'staff');
+      } finally {
+        chatSendBtn.textContent = originalChatBtnText;
+        chatSendBtn.disabled = false;
+      }
+    });
+
+    function appendMessage(text, sender, attachedFileName = null) {
+      const div = document.createElement('div');
+      div.className = `chat-message ${sender}`;
+      let content = `<span>${text}</span>`;
+      if (attachedFileName) {
+        content += `<div class="chat-attachment">📎 ${attachedFileName}</div>`;
+      }
+      div.innerHTML = content;
+      chatMessages.appendChild(div);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function showTypingIndicator() {
+      const indicator = document.createElement('div');
+      indicator.className = 'typing-indicator';
+      indicator.id = 'typing';
+      indicator.innerHTML = '<span></span><span></span><span></span>';
+      chatMessages.appendChild(indicator);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    function removeTypingIndicator() {
+      const indicator = document.getElementById('typing');
+      if (indicator) indicator.remove();
+    }
+  </script>
 </body>
 </html>
