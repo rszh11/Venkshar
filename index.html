@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet" />
 </head>
 <body>
-<body>
   <header role="banner">
     <div class="container">
       
@@ -122,13 +121,22 @@
   <form class="contact-form" id="contact-form" novalidate>
     <label for="name">Ihr Name</label>
     <input type="text" id="name" name="name" required placeholder="Thirunathan Kanagaratnam" />
+    
     <label for="email">Ihre E-Mail</label>
     <input type="email" id="email" name="email" required placeholder="tkanagaratnam@venkshar.com" />
+    
     <label for="message">Ihre Nachricht</label>
     <textarea id="message" name="message" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+    
+    <label for="theFile">Datei anhängen (optional, max. ~30MB)</label>
+    <input type="file" id="theFile" name="theFile" accept="*/*" />
+    <br><br>
+
     <button type="submit" class="btn-submit">Nachricht senden</button>
   </form>
 </section>
+
+
 
 <button id="chat-open-btn" aria-haspopup="dialog" aria-controls="chat-panel" aria-label="Chat mit Buchhaltungsfirma öffnen">Chat starten</button>
 
@@ -149,6 +157,76 @@
 <footer role="contentinfo" class="container" style="text-align:center; padding:1.6rem 0; font-size:0.9rem; color:#6b7280;">
   &copy; 2025 Venkshar Financial AG. Alle Rechte vorbehalten.
 </footer>
+
+<script>
+  const contactForm = document.getElementById("contact-form");
+  const submitBtn = contactForm.querySelector(".btn-submit");
+  const fileInput = document.getElementById("theFile");
+
+  // WICHTIG: Ersetze dies mit deiner Google Apps Script Web-App URL!
+  const scriptURL = "https://script.google.com/macros/s/AKfycbw_ld7ebLB9MDrgZOLZarShxAah-BzChvijv4OZlN0SP1NyaY4spc3JYaC0_JJhwvCV/exec";
+
+  // Hilfsfunktion: Wandelt die Datei in einen Base64-String um
+  async function getBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const data = e.target.result.split(",");
+        resolve({
+          fileName: file.name,
+          mimeType: data[0].match(/:(\w.+);/)[1],
+          data: data[1], // Der eigentliche Datei-Inhalt
+        });
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.textContent = "Wird gesendet...";
+    submitBtn.disabled = true;
+
+    try {
+      // 1. Text-Daten aus dem Formular sammeln
+      const formDataObj = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      };
+
+      // 2. Prüfen, ob eine Datei ausgewählt wurde, und umwandeln
+      if (fileInput.files.length > 0) {
+        formDataObj.fileData = await getBase64(fileInput.files[0]);
+      }
+
+      // 3. Alles an Google senden
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(formDataObj),
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+      });
+
+      const data = await response.json();
+
+      if (data.status === "success") {
+        alert("Vielen Dank! Ihre Nachricht (und Datei) wurde erfolgreich gesendet.");
+        contactForm.reset();
+      } else {
+        throw new Error(data.message);
+      }
+    } catch (error) {
+      console.error("Fehler:", error);
+      alert("Fehler beim Senden. Bitte versuchen Sie es später erneut.");
+    } finally {
+      submitBtn.textContent = originalBtnText;
+      submitBtn.disabled = false;
+    }
+  });
+</script>
 
 <script>
   // Smooth scroll for anchor links
@@ -213,22 +291,6 @@
       appendMessage(reply, 'staff');
     }, 1500);
   }
-
-  // Contact form validation and submission (mock)
-  const contactForm = document.getElementById('contact-form');
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = contactForm.name.value.trim();
-    const email = contactForm.email.value.trim();
-    const message = contactForm.message.value.trim();
-    if(!name || !email || !message){
-      alert('Bitte alle Felder ausfüllen.');
-      return;
-    }
-    // Mock submission
-    alert(`Danke, ${name}. Ihre Nachricht wurde gesendet.`);
-    contactForm.reset();
-  });
 </script>
 
 </body>
